@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script defer src="./js/list_item.js"></script>
+    <script defer src="./js/common.js"></script>
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>ON : PEP Test</title>
+</head>
+<body>
+   
+    <div class="wrap">
+        <div class="h_d">
+            <div class="header">
+                <div class="logo">
+                    <a href="#">
+                        <div class="flex">
+                            <span>ON : PEP Test</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title_box">
+                <img src="./img/logo_img.png" alt="logo" class="logo_img"><h1>ON : PEP Test</h1>
+            </div>
+            <div class="c_box">
+                <span>검사를 시작하기 전 정보를 입력해주세요</span>
+            </div>
+            <div class="center_box">
+                <form action="" method="get" class="c_text_box">
+                    <div class="f_box">
+                        <div class="c_name_box">
+                            <span>이름</span>
+                            <div class="name_box"><input type="text" placeholder="이름을 입력하세요" name="name"></div>
+                        </div>
+                        <div class="c_gender_box">
+                            <span>성별</span>
+                            <div class="gender">
+                                <label for="women"><input type="radio" name="gender" id="women" class="r_gen_circle" value="women"><div class="women">여성</div></label>
+                                <label for="men"><input type="radio" name="gender" id="men" class="r_gen_circle" value="men"><div class="men">남성</div></label>
+                            </div>
+                        </div>
+                        <div class="c_b_type_box">
+                            <span>혈액형</span>
+                            <div class="b_type">
+                                <span class="a_b_type">
+                                    <label for="A_type"><input type="radio" name="b_type" id="A_type" class="r_b_type_circle" value="A_type"><div class="A_type">A형</div></label>
+                                    <label for="B_type"><input type="radio" name="b_type" id="B_type" class="r_b_type_circle" value="B_type"><div class="B_type">B형</div></label>
+                                </span>
+                               <span class="o_ab_type">
+                                    <label for="O_type"><input type="radio" name="b_type" id="O_type" class="r_b_type_circle" value="O_type"><div class="O_type">O형</div></label>
+                                    <label for="AB_type"><input type="radio" name="b_type" id="AB_type" class="r_b_type_circle" value="AB_type"><div class="A">AB형</div></label>
+                               </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s_box">
+                        <div class="c_birth_box">
+                            <span>생년월일</span>
+                            <div class="year_box">
+                                <input type="text" name="year" id="year" placeholder="태어난 해">
+                                <div class="birth_text">년</div>
+                            </div>
+                            <div class="month_box">
+                                <input type="text" name="month" id="month" placeholder="태어난 월">
+                                <div class="birth_text">월</div>
+                            </div>
+                            <div class="day_box">
+                                <input type="text" name="day" id="day" placeholder="태어난 일">
+                                <div class="birth_text">일</div>
+                            </div>
+                            <input type="hidden" name="age" value="" id="age">
+                        </div>
+                        <div class="c_body_box">
+                            <span>키/몸무게</span>
+                            <div class="height_box"><input type="text" name="height" placeholder="신장" id="height"><span>(cm)</span></div>
+                            <div class="weight_box"><input type="text" name="weight" placeholder="체중" id="weight"><span>(kg)</span></div>
+                        </div>
+                    </div>
+                    <div class="t_box">
+                        <div class="bmi_box">
+                            <span>BMI</span>
+                            <span class="bmi_in"></span>
+                            <span class="bmi_after">(kg/m<sup>2</sup>)</span>
+                            <input type="hidden" name="bmi" value="" id="bmi">
+                        </div>
+                        <div class="bsa_box">
+                            <span>BSA</span>
+                            <span class="bsa_in"></span>
+                            <span class="bsa_after">(m<sup>2</sup>)</span>
+                            <input type="hidden" name="bsa" value="" id="bsa">
+                        </div>
+                        <div class="ccr_box">
+                            <span>*참고(의료인용) Ccr(크레아티닌)</span>
+                            <div class="ccr">
+                                <span class="ccr_cr_in">혈청 <input type="text" name="cr" id="cr"></span>
+                                <span class="ccr_in"></span>
+                                <span class="ccr_after">(mL/min)</span>
+                                <input type="hidden" name="ccr" value="" id="ccr">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bu_box"><button type="submit" class="to_inspect">검사 하기</button></div>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="a_tag">
+                <div class="main">
+                    <div class="n_item">
+                        <a href="#"><div class="n_link">개인정보처리방침</div></a>
+                    </div>
+                    <div class="n_item">
+                        <a href="https://crystalplain.github.io/plain/Inspection/index.html" target="_blank"><div class="n_link">ON PEP Test</div></a>
+                    </div>
+                </div>
+            </div>
+            <div class="main height">
+                <div class="addr_text">
+                    <div class="f_text">
+                        <span>개발자: 은명</span>
+                    </div>
+                    <span class="t_title">주소: <span class="addr">서울 강서구 마곡중앙6로 45, 리더스퀘어마곡 A동 403호/</span></span>
+                    <span class="t_title">전화번호: <span class="tel">010-7751-8275</span></span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+        $(document).ready(function(){
+            $('input[type=submit]').click(function(){
+                var value = $("input[type=radio][name=novel]:checked").val();
+                if(value) {
+                    console.log(value);
+                }
+                else {
+                    console.log('Nothing if selected');
+                }
+            })
+        })
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,355 @@
+.wrap {
+    width: 100%;
+}
+input[type=text]  {
+    background-color: #feb04133;
+    border: 1px solid #00000030 !important;
+}
+.header {
+    margin-bottom: 60px;
+}
+.content {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+    /* border: 7px solid #feb041; */
+    box-shadow: 0px 0px 30px #feb04198;
+    border-radius: 30px;
+    padding: 50px 40px;
+
+    margin-top: 130px;
+    margin-bottom: 150px;
+}
+.title_box img {
+    width: 170px;
+}
+.title_box {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #2f2f2f;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.center_box {
+    width: 100%;
+}
+.c_text_box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.c_box {
+    font-size: 17px;
+    font-weight: 800;
+}
+.c_box > span {
+    font-size: 17px;
+    color: #4b4b4b;
+}
+
+.f_box,
+.s_box,
+.t_box {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    margin: 30px 0;
+}
+.f_box {justify-content: center;align-items: flex-start;}
+.s_box {justify-content: center; align-items: flex-start;}
+.t_box {justify-content: center;align-items: flex-start;}
+
+
+.c_name_box {justify-content: center;}
+
+.c_b_type_box,
+.c_name_box,
+.c_gender_box,
+.ccr_box,
+.bsa_box,
+.bmi_box,
+.c_birth_box,
+.c_body_box {
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.ccr_box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.ccr {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.ccr_cr_in {font-weight: 800;}
+#cr {
+    width: 70px;
+    height: 28px;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+.ccr_box > span:nth-of-type(1),
+.bsa_box > span:nth-of-type(1),
+.bmi_box > span:nth-of-type(1) {
+
+    display: inline-block;
+    font-size: 15px ;
+    font-weight: 700;
+    color: rgb(44, 44, 44);
+}
+.c_b_type_box > span,
+.c_gender_box > span,
+.c_birth_box > span,
+.c_month_box > span,
+.c_name_box > span,
+.c_body_box > span,
+.c_gender_box > span {
+    width: 100%;
+    display: inline-block;
+    font-size: 15px ;
+    font-weight: 700;
+    color: rgb(44, 44, 44);
+}
+.radio_box {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+.b_type,
+.gender {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.a_b_type,
+.o_ab_type{
+    display: flex;
+    gap: 10px;
+}
+.r_b_type_circle,
+.r_gen_circle {
+    width: 30px;
+    height: 30px;
+    accent-color: #ee5b28;  /* #feb041 #646974 #ee5b28*/ 
+}
+
+
+/*/////////////////////////*/
+
+.c_name_box  input {
+    width: 140px;
+    height: 34px;
+    padding: 5px 20px 5px 10px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+
+.bu_box {
+    width: 100%;
+    margin-top: 50px;
+}
+.to_inspect {
+    max-width: 240px;
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 30px;
+    background-color: #feb041;
+    color: #fff;
+    text-shadow: 0px 0px 3px #f3690c;
+
+    font-size: 15px;
+    font-weight: 800;
+}
+.rg_span {
+    margin-top: 10px;
+}
+input[name="rg_c"]:checked ~ label > div {
+    background-color: #ecc874;
+}
+.radio_box input {
+    display: none;
+}
+.c_body_box {gap: 15px;}
+.c_birth_box {
+    gap: 10px;
+}
+.height_box,
+.weight_box,
+.year_box,
+.month_box,
+.day_box {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.height_box > input,
+.weight_box > input,
+.year_box > input,
+.month_box > input,
+.day_box > input {
+    width: 70px;
+    height: 24px;
+    padding: 5px 20px 5px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+#ccr,
+#bmi,
+#bsa {
+    width: 100px;
+    height: 30px;
+    background-color: #8f9aa7;
+    color: white;
+    border-radius: 5px;
+    line-height: 30px;
+}
+.ccr_box,
+.bsa_box,
+.bmi_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.ccr_in,
+.bmi_in,
+.bsa_in {
+    width: 100px;
+    height: 30px;
+    background-color: #feb04133;
+    border-radius: 5px;
+    color: rgb(41, 41, 41);
+    line-height: 30px;
+    border: 1px solid #00000030;
+}
+.ccr_after,
+.bsa_after,
+.bmi_after {
+    font-size: 14px;
+    color: #262626;
+}
+
+
+
+/* media 반응형 사이즈 css */
+
+@media (max-width: 1380px) {
+    .c_text_box {
+        flex-direction: row !important;
+        gap: 0 !important;
+    }
+    
+    .content {margin-bottom: 100px;}
+}
+@media (max-width: 1320px) {
+    .c_hidden_box {
+        display: none;
+    }
+    .center_box {
+        display: inline-block;
+        width: 100%;
+    }
+    .c_text_box {
+        width: 100%;
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        gap: 40px;
+        align-content: center;
+        flex-wrap: wrap;
+        padding: 30px 0;
+    }
+    .c_name_box, .c_gender_box {margin: 0}
+    .content { padding:  50px 10px; width: 80%;}
+}
+
+@media (max-width: 1000px) {
+    .c_box,
+    .title_box {
+        font-size: 14px;
+    }
+    .title_box img {width: 150px;}
+}
+
+@media (max-width: 880px) {
+    .c_box > span,
+    .title_box {
+        font-size: 13px;
+    }
+    .c_text_box {
+        font-size: 13px;
+        gap: 20px;
+    }
+    .s_box {gap: 80px;}
+    .c_body_box,.c_birth_box {flex-direction: column;}
+    .f_box, .s_box, .t_box {margin: 0 0 15px 0;}
+}
+
+@media (max-width: 667px) {
+    /* .c_b_type_box, .c_name_box, .c_gender_box {
+        gap: 10px;
+    } */
+    .c_name_box {width: 100%;}
+    .content {margin-top: 100px;}
+    .f_box, .s_box, .t_box {flex-wrap: wrap;}
+    .c_name_box {width: 100%;}
+}
+@media (max-width: 580px) {
+    .c_b_type_box {flex-direction: column; }
+    .title_box img {width: 130px;}
+}
+
+@media (max-width: 500px) {
+    .c_box > span,
+    .title_box {
+        font-size: 12px;
+    }
+    .header {
+        margin-bottom: 50px;
+    }
+    .c_text_box {align-content: space-around; gap: 10px !important;}
+   
+    .c_name_box input {width: 110px;}
+    .name_box {width: 150px;}
+    .ccr_in,.bmi_in, .bsa_in {width: 50px;}
+    .s_box, .t_box {flex-wrap: wrap;}
+    .bu_box {margin-top: 30px;}
+    .s_box, .t_box {gap: 20px;}
+    .f_box {gap: 20px;}
+    .title_box img {width: 100px;}
+    .a_b_type, .o_ab_type {flex-direction: column;}
+    .c_b_type_box {margin-right: 20px;}
+    .c_b_type_box, .c_name_box, .c_gender_box, .c_birth_box, .c_body_box {flex-direction: column; justify-content: flex-start;}
+}
+@media (max-width: 360px) {
+    .f_box {flex-direction: column;}
+    .c_gender_box {margin-right: 20px;}
+    .t_box {padding-left: 60px !important;}
+}
+@media (max-width: 350px) {
+    .t_box {justify-content: flex-start; padding-left: 50px !important; box-sizing: border-box;}
+    .f_box,.s_box,.t_box {margin: 10px 0;}
+}
+
+@media (max-width: 270px) {
+    .content {margin-left: 0px; margin-right: 0;}
+    .t_box {padding-left: 30px !important;}
+    
+}

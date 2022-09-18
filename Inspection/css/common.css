@@ -1,0 +1,94 @@
+
+/*#ed5c27  #ecc874  #feb041*/
+body {
+    margin: 0;
+    color: #343539;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+span {
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.h_d {
+    width: 100%;
+    height: 60px;
+}
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #feb041;
+    box-shadow: 0px 1px 20px 0px #feb041;  /* #1f273a 에서 투명도 준게 #1f273a68 */
+    color: #fff;
+    text-align: center;
+
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.logo {
+    height: 100%;
+    font-size: 30px;
+    line-height: 60px;
+    font-weight: 900;
+}
+.logo a {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    height: 150px;
+    background-color: #2f2f2f;
+    color: #fff;
+    padding: 0 0 30px 0;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.a_tag {
+    width: 100%;
+    background-color: #191919;
+    box-sizing: border-box;
+}
+.n_item {
+    color: rgb(226, 226, 226);
+    display: inline-block;
+}
+.n_item a {
+    padding: 13px 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+}
+.n_item a:hover {
+    color: #fff;
+    font-weight: 800;
+}
+.main {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+}
+.height {height: 100px;}
+.f_text {
+    font-size: 17px;
+    font-weight: 800;
+}
+.t_title {font-weight: 800; color: #cacaca;}
+.tel,
+.addr {
+    font-size: 14px;
+    font-weight: 500;
+}

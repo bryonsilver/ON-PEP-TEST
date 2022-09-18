@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON : PEP Test</title>
+
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script defer src="./js/list_item.js"></script>
+    <script defer src="./js/result.js"></script>
+    <script defer src="./js/common.js"></script>
+    
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/result.css">
+</head>
+<body>
+    <div class="on_shar_btn_box">
+
+        <div class="div_p">
+            <div class="on_top">
+                <div class="sns_title">ON : PEP Test 공유하기</div>
+                <div class="close"><img src="./img/close.png" alt="close_img" class="close_img"></div>
+            </div>
+            <ul class="snsList">
+                
+                <li class="link sns_a">
+                    <a href="#n" onclick="clip('https:crystalplain.github.io/plain/Inspection/index.html'); return false; " id="link" title="링크복사">
+                        <span class="btn_link_a"><img src="./img/link2.png" alt="sns_link_img" class="sns_link_img"></span>
+                    </a>
+                </li>
+                <li class="kakaotalk sns_a">
+                    <a href="javascript:ShareKakaoTalk()" title="카카오톡"><span class="btn_comm"  width="64"  ><img src="./img/kakao6.png" alt="kakaoTalk_img" class="kakao_talk_img"></span></a>
+                </li>
+                <li class="facebook sns_a">
+                    <a href="#" id="vIconFb" onclick="return false;"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
+                </li>
+                <!--<li class="twitter">
+                    <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw"></i>트위터</a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="test_shar_btn_box">
+        <div class="div_p">
+            <div class="on_top">
+                <div class="sns_title">검사결과 공유하기</div>
+                <div class="close"><img src="./img/close.png" alt="close_img" class="close_img"></div>
+            </div>
+            <ul class="snsList2">
+                <li class="link sns_a">
+                    <a href="#n" onclick="clip(); return false; " id="link" title="링크복사">
+                        <span class="btn_link_a"><img src="./img/link2.png" alt="sns_link_img" class="sns_link_img"></span>
+                    </a>
+                </li>
+                <li class="kakaotalk sns_a">
+                    <a href="#"><span class="btn_comm" id="shareKa" width="64"  onclick="link_app('kakaotalk://kakaotalk/home','id362057947')"><img src="./img/kakao6.png" alt="kakao_talk_img" class="kakao_talk_img"></span></a>
+                </li>
+                <li class="fabook sns_a">
+                    <a href="#" class="btn_share_sns" id="sns_facebook" title="페이스북 연동 새창열기" onclick="shareSns('facebook');"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
+                </li>
+                <!--<li class="twitter">
+                    <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw"></i>트위터</a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="wrap">
+        
+        <div class="h_d">
+            <div class="header">
+                <div class="logo">
+                    <a href="./index.html">
+                        <div class="flex">
+                            <span>ON : PEP Test</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="r_box_content">
+                <img src="./img/talk_b2.png" alt="talk_b_img" class="talk_b">
+                <div class="result_text_box">
+                    <div class="r_t_result_box">
+                        <div class="rt_fixed">
+                            <div class="box">
+                                <span class="rt_r_name"><span id="rt_name">환자</span> 님의 검사결과는</span>
+                                <span class="rt_text">  아래와 같습니다.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="r_t_text"><span class="r_span">" 3년 안에 "</span> 검사 받아야 합니다</div>
+                </div>
+            </div>
+
+            <div class="con_box">
+                <img src="./img/doctor6.png" alt="doctor_img" class="doctor">
+                <img src="./img/doctor6_1.png" alt="doctor_img" class="doctor2">
+                <img src="./img/pancreas3.png" alt="pancreas_img" class="pancreas">
+                <div class="bar_box">
+                    
+                    <div class="flex_bar">
+                        <div class="bar_box_2">
+                            <div class="bar_little_box">
+                                <div class="bar p_bar">
+                                    <div class="bar_title">췌장염 유발 가능성: <span class="bar_t_dan">위험(고)</span></div>
+                                    <div class="bar_0 bar_per">0%</div>
+                                    <div class="bar_stick_box">
+                                        <div class="bar_stick"><div class="bar_color yellow"></div></div>
+                                    </div>
+                                    <div class="bar_line_per1"></div>
+                                    <div class="bar_100 bar_per">100%</div>
+                                </div>
+                            </div>
+                            <div class="bar_little_box">
+                                <div class="bar pc_bar">
+                                    <div class="bar_title">췌장암 유발 가능성: <span class="bar_t_dan">정상</span></div>
+                                    <div class="bar_0 bar_per">0%</div>
+                                    <div class="bar_stick_box">
+                                        <div class="bar_stick"><div class="bar_color orange"></div></div>
+                                    </div>
+                                    <div class="bar_line_per2"></div>
+                                    <div class="bar_100 bar_per">100%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top_box">
+                            <div class="table_box">
+                                <div class="chart">
+                                    <div class="dis_name">위험도 단계</div>
+                                    <div class="chart_persent">
+                                        <div class="hori_title_box">
+                                            <div class="hori_title">정상</div>
+                                            <div class="hori_title">저</div>
+                                            <div class="hori_title">중</div>
+                                            <div class="hori_title">고</div>
+                                        </div>
+                                        <div class="hori_num_box">
+                                            <div class="hori_num">0~24%</div>
+                                            <div class="hori_num">25~49%</div>
+                                            <div class="hori_num">50~74%</div>
+                                            <div class="hori_num">75~100%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="link_btn_box">
+                        <div class="link_btn">
+                            <div class="main_btn">
+                                <a href="./index.html"><span>검사 다시하기</span></a>
+                            </div>
+                            <div class="test_shar_btn">
+                                <span>검사결과 공유하기</span>
+    
+                                <!-- <div class="test_shar_btn_box">
+                                    <ul class="snsList2">
+                                        <li class="link sns_a">
+                                            <a href="#n" onclick="clip(); return false; " id="link" title="링크복사">
+                                                <img src="./img/link2.png" alt="sns_link_img" class="sns_link_img">
+                                            </a>
+                                        </li>
+                                        <li class="kakaotalk sns_a">
+                                            <a href="#"><span class="btn_comm" id="shareKa" width="64"  onclick="link_app('kakaotalk://kakaotalk/home','id362057947')"><img src="./img/kakao6.png" alt="kakao_talk_img" class="kakao_talk_img"></span></a>
+                                        </li>
+                                        <li class="facebook sns_a">
+                                            <a href="#" id="vIconFb" onclick="return false;"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></a>
+                                        </li> -->
+                                       <!--<li class="twitter">
+                                            <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw"></i>트위터</a>
+                                        </li> -->
+                                    <!-- </ul>
+                                </div> -->
+                            </div>
+                            <div class="on_shar_btn">
+                                <span>ON : PEP Test 공유하기</span>
+    
+                                <!-- <div class="on_shar_btn_box">
+                                    <ul class="snsList">
+                                        <li class="link sns_a">
+                                            <a href="#n" onclick="clip('https:crystalplain.github.io/plain/Inspection/index.html'); return false; " id="link" title="링크복사">
+                                                <img src="./img/link2.png" alt="sns_link_img" class="sns_link_img">
+                                            </a>
+                                        </li>
+                                        <li class="kakaotalk sns_a">
+                                            <a href="#"><span class="btn_comm" id="shareKa" width="64"  onclick="link_app('kakaotalk://kakaotalk/home','id362057947')"><img src="./img/kakao6.png" alt="kakaoTalk_img" class="kakao_talk_img"></span></a>
+                                        </li>
+                                        <li class="facebook sns_a">
+                                            <a href="#" id="vIconFb" onclick="return false;"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></a>
+                                        </li>
+                                       <!--<li class="twitter">
+                                            <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw"></i>트위터</a>
+                                        </li> -->
+                                    <!-- </ul>
+                                </div>  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="a_tag">
+                <div class="main">
+                    <div class="n_item">
+                        <a href="#"><div class="n_link">개인정보처리방침</div></a>
+                    </div>
+                    <div class="n_item">
+                        <a href="https://crystalplain.github.io/plain/Inspection/index.html" target="_blank"><div class="n_link">ON PEP Test</div></a>
+                    </div>
+                </div>
+            </div>
+            <div class="main height">
+                <div class="addr_text">
+                    <div class="f_text">
+                        <span>개발자: 은명</span>
+                    </div>
+                    <span class="t_title">주소: <span class="addr">서울 강서구 마곡중앙6로 45, 리더스퀘어마곡 A동 403호/</span></span>
+                    <span class="t_title">전화번호: <span class="tel">010-7751-8275</span></span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function clip() {
+            var url = '';
+            var textarea = document.createElement("textarea");
+            document.body.appendChild(textarea);
+            url = window.document.location.href;
+            textarea.value = url;
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+            alert("URL이 복사되었습니다.")
+        }
+
+        function clip2(val) {
+            var t = document.createElement('textarea');
+            document.body.appendChild(t);
+            t.value = val;
+            t.select();
+            document.execCommand('copy');
+            document.body.removeChild(t);
+            alert("URL이 복사되었습니다.")
+        }
+
+        
+
+        
+        // 페이스북 (검사결과 공유)
+        function shareSns(sns){
+            var snsTitle = '';
+            var snsItems = new Array();
+            var winOpt = new Array();
+            var snsUrl = location.href;
+    
+            snsItems['facebook'] = "http://www.facebook.com/share.php?t="+encodeURIComponent(snsTitle) + "&u=" + encodeURIComponent(snsUrl);
+    
+            winOpt['facebook'] = "";
+    
+            var win = window.open(snsItems[sns], sns, winOpt[sns]);
+            if (win) {
+                win.focus();
+            }
+        }
+
+        // 페이스북 (ON : PEP Test)
+        $(window).ready(function(){ 
+            $(".facebook a").click(function(){
+                shareAct(this);
+            });
+        });
+        function shareAct(a){
+            var snsCode = $(a).attr('id');
+            var cUrl = "https://crystalplain.github.io/plain/Inspection/index.html";
+            switch(snsCode){
+                //case"vIconTw":
+                    //트위터
+                    //cUrl = 'https://twitter.com/intent/tweet?text=ON_PEP_Test:&url='+cUrl;
+                //break;
+                        
+                case"vIconFb":
+                    //페이스북
+                    cUrl = 'http://www.facebook.com/sharer/sharer.php?u='+cUrl;
+                break;
+        
+               // case"vIconKs":
+                    //카카오스토리
+                    //cUrl = 'https://story.kakao.com/share?url='+cUrl;
+               // break;
+            }
+            window.open(cUrl,'','width=600,height=300,top=100,left=100,scrollbars=yes');
+        }
+        
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON : PEP Test</title>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script defer src="./js/list.js"></script>
+    <script defer src="./js/list_item.js"></script>
+    <script defer src="./js/common.js"></script>
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/list.css">
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="position_wrap">
+            <img src="./img/pancreas4.png" alt="pancreas_img" class="list_img">
+        </div>
+        <div class="h_d">
+            <div class="header">
+                <div class="logo">
+                    <a href="./index.html">
+                        <div class="flex">
+                            <span>ON : PEP Test</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            
+            <div class="question_box">
+                <div class="q_text_box">
+                    <div class="q_t_box1">
+                        <input type="hidden" name="id_name" value="" id="id_name">
+                        현재 상태에 해당하는 내용을 선택해 주십시오.
+                    </div>
+                </div>
+                <div class="q_box position_r">
+                    <form action="./result.html" class="q_form">
+                        <input type="radio" name="page" id="page1" checked>
+                        <input type="radio" name="page" id="page2">
+                        <input type="radio" name="page" id="page3">
+
+                        <input type="hidden" name="index_name" value="" id="index_name">
+                        <div class="q_list_box" id="pan_pc">
+                        </div>
+                        <div class="q_list_box2" id="pan_cancer">
+                        </div>
+                        <div class="q_list_box3" id="pan">
+                        </div>
+    
+                        
+    
+                        <div class="tab_box">
+                            <label for="page1" class="prev_page">이전</label>
+                            <label for="page2" class="next_page1">다음</label>
+                            <label for="page3" class="next_page2">다음</label>
+                            
+                        </div>
+                        <input type="hidden" name="p_total_v" value="" id="p_total_v">
+                        <input type="hidden" name="pc_total_v" value="" id="pc_total_v">
+
+                        <input type="hidden" name="p_pro_v" value="" id="p_pro_v">
+                        <input type="hidden" name="pc_pro_v" value="" id="pc_pro_v">
+                        <div class="pre_next">
+                            <input type="radio" name="pre_nex" id="next">
+                            <label for="next"> <button class="pn_button next" type="submit">결과 보기</div></label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="a_tag">
+                <div class="main">
+                    <div class="n_item">
+                        <a href="#"><div class="n_link">개인정보처리방침</div></a>
+                    </div>
+                    <div class="n_item">
+                        <a href="https://crystalplain.github.io/plain/Inspection/index.html" target="_blank"><div class="n_link">ON PEP Test</div></a>
+                    </div>
+                </div>
+            </div>
+            <div class="main height">
+                <div class="addr_text">
+                    <div class="f_text">
+                        <span>개발자: 은명</span>
+                    </div>
+                    <span class="t_title">주소: <span class="addr">서울 강서구 마곡중앙6로 45, 리더스퀘어마곡 A동 403호/</span></span>
+                    <span class="t_title">전화번호: <span class="tel">010-7751-8275</span></span>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+       $(document).ready(function(){
+         //이전 다음 버튼 클릭하면 색칠 되는 기능
+         $('.pn_button').click(function(){
+            $('.pn_button').removeClass('pn_active')
+            $(this).addClass('pn_active')
+        })
+       })
+    </script>
+</body>
+</html>
