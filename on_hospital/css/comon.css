@@ -1,0 +1,158 @@
+body {margin: 0; padding: 0;}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+.wrap {
+    width: 100%;
+    background-color: thistle;
+}
+.content {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+.h_fixed {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    background-color: burlywood;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+.h_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* google translate */
+#google_translate_element > div > div > select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	display: block;
+	width: 100%;
+	max-width: 150px;
+	height: 30px;
+	float: right;
+	margin: 5px 0px;
+	padding: 0px 15px;
+	font-size: 14px;
+	line-height: 1.75;
+	color: #333;
+	border: 1px solid #cccccc;
+	-ms-word-break: normal;
+	word-break: normal;
+	border-radius: 10px;
+	outline: none;
+}
+#google_translate_element > div > div {
+	position: relative;
+	min-width: 100px;
+	height: 0;
+}
+#google_translate_element > div > div > select::-ms-expand {
+	display: none;
+}
+
+#google_translate_element > div > div:after {
+	content: '<>'; /* 목록 펼침 아이콘 */
+	font: 14px "Consolas", monospace;
+	color: #333;
+	transform: rotate(90deg);
+	right: 11px;
+	top: 10px;
+	padding: 0 0 2px;
+	border-bottom: 1px solid #999;
+	position: absolute;
+	pointer-events: none;
+}
+.skiptranslate span {
+	display: none;
+}
+.goog-te-combo {
+	color: #444;
+}
+.skiptranslate
+.goog-logo-link,
+.goog-te-gadget {
+	color: white !important;
+}
+.goog-logo-link img {
+	display: none;
+}
+.goog-te-gadget {
+	font-size: 0 !important;
+}
+
+/* 구글 번역 팝업창 없애는 코드!! */
+.goog-tooltip {display: none !important;} 
+.goog-tooltip:hover {display: none !important;} 
+.goog-text-highlight {background-color: transparent !important; border: none !important; box-shadow: none !important;}
+body { position: static !important; top:0px !important; } 
+iframe.goog-te-banner-frame { display: none !important; } 
+.goog-logo-link { display:none !important; }  
+.goog-te-gadget { color: transparent !important; overflow: hidden;}  
+.goog-te-balloon-frame{display: none !important;}  
+
+
+.g_first_box {
+	width: 170px;
+	max-width: 100%;
+	height: 50px;
+}
+.g_second_box {
+	width: 100%;
+	height: 80%;
+	display: flex;
+	justify-content: space-between;
+}
+.lang_img {
+	width: 30px;
+	margin: 10px 0 0 10px;
+}
+.row {word-break: break-all;}
+
+/* logo */
+.logo_box {
+    display: inline-block;
+}
+
+/* burger */
+.burger_menu_box {
+    width: 50px;
+    height: 60px;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.burger_menu_box > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 17px;
+    /* transition: transform 330ms ease-out,-webkit-transform 330ms ease-out; */
+}
+.line_menu {
+    background-color: #111;
+    height: 3px;
+    border-radius: 2px;
+}
+.first_line {
+    transform-origin: right;
+    width: 50%;
+}
+.last_line {
+    align-self: flex-end;
+    transform-origin: left;
+    width: 50%;
+}
