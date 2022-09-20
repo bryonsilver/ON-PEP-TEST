@@ -16,6 +16,9 @@ a {
     text-decoration: none;
     color: inherit;
 }
+input {
+    outline: none;
+}
 
 .h_d {
     width: 100%;
@@ -98,6 +101,7 @@ a {
     padding: 5px 0;
     box-sizing: border-box;
 }
+
 
 @media (max-width: 456px) {
     .n_item a {padding: 10px 5px; font-size: 14px;}
