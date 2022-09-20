@@ -145,11 +145,35 @@ $(document).ready(function() {
         $('html,body').animate({
             scrollTop: 0
         }, 300);
+        $('.position_wrap ').css({top: '170px'})
     });
     $('.next_page2').on('click', function () {
         $('html,body').animate({
             scrollTop: 0
         }, 300);
+        $('.position_wrap ').css({top: '170px'})
     });
+
+    let d_height = $(document).height();
+    let w_height = $(window).height();
+
+    $(window).resize(function(){
+        w_height = $(window).height();
+    })
+    let count = 0;
+    $(window).scroll(function(){
+        let s_top = $(window).scrollTop();
+        let s_bot = w_height+s_top;
+        // console.log('d_height',d_height, 's_bot', s_bot)
+
+        if(count < 3){
+            if(d_height == s_bot) {
+                $('.position_wrap ').css({top: '80px'})
+                count+=1;
+                console.log("count" + count);
+            }
+            d_height = $(document).height();
+        }
+    })
 })
 

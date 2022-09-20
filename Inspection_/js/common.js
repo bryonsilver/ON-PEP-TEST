@@ -222,17 +222,23 @@ $(document).ready(function(){
         var year = $('#year').val();
         var date = new Date();
         var t_year = String(date.getFullYear());
-        var t_age = (t_year - year) +1
+        var t_age = (t_year - year)
         
         if(gender === 'women') {
-            var ccr = (140 - t_age) * weight * 0.85/ cr * 72
-            $('.ccr_in').html(ccr)
-            $('.#ccr').attr('value', ccr)
+            var ccr = (140 - t_age) * weight /( cr * 72 * 0.85)
+            $('.ccr_in').html(ccr.toFixed(2))
+            $('#ccr').attr('value', ccr.toFixed(2))
+
+            if (ccr < 1.4) {console.log("정상")}
+            else {console.log("정상아님")}
         }
         else {
-            var ccr = (140 - t_age) * weight / cr * 72
-            $('.ccr_in').html(ccr.toFixed(0))
-            $('.#ccr').attr('value', ccr.toFixed(0))
+            var ccr = (140 - t_age) * weight /( cr * 72)
+            $('.ccr_in').html(ccr.toFixed(2))
+            $('#ccr').attr('value', ccr.toFixed(2))
+
+            if (ccr < 1.4) {console.log("정상")}
+            else {console.log("정상아님")}
         }
     })
 

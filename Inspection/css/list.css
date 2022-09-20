@@ -383,7 +383,7 @@ input[name=page] {
 @media (max-width: 590px) {
     .content {
         padding: 0 30px;
-        margin-top: 100px;
+        margin-top: 50px;
     }
     .header {margin-bottom: 30px;}
     .prev_page,
