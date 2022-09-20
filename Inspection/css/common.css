@@ -90,6 +90,7 @@ input {
     font-size: 17px;
     font-weight: 800;
 }
+
 .t_title {font-weight: 800; color: #cacaca;}
 .tel,
 .addr {
@@ -108,4 +109,15 @@ input {
     .f_text {font-size: 20px;}
     .block {font-size: 14px;}
     .main {width: 80%;}
+    .m_flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .addr_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

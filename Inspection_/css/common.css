@@ -16,6 +16,9 @@ a {
     text-decoration: none;
     color: inherit;
 }
+input {
+    outline: none;
+}
 
 .h_d {
     width: 100%;
@@ -87,6 +90,7 @@ a {
     font-size: 17px;
     font-weight: 800;
 }
+
 .t_title {font-weight: 800; color: #cacaca;}
 .tel,
 .addr {
@@ -99,9 +103,21 @@ a {
     box-sizing: border-box;
 }
 
+
 @media (max-width: 456px) {
     .n_item a {padding: 10px 5px; font-size: 14px;}
     .f_text {font-size: 20px;}
     .block {font-size: 14px;}
     .main {width: 80%;}
+    .m_flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .addr_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
