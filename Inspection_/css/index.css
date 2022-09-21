@@ -244,6 +244,13 @@ input[name="rg_c"]:checked ~ label > div {
     color: #262626;
 }
 
+.to_inspect > a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    line-height: 45px;
+}
+
 
 
 /* media 반응형 사이즈 css */
