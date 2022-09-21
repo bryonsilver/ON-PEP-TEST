@@ -102,6 +102,9 @@ input {
     padding: 5px 0;
     box-sizing: border-box;
 }
+.slash {
+    display: inline-block;
+}
 
 
 @media (max-width: 456px) {
@@ -120,4 +123,5 @@ input {
         justify-content: center;
         align-items: center;
     }
+    .slash {display: none;}
 }
