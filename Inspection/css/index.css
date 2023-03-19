@@ -344,7 +344,7 @@ input[name="rg_c"]:checked ~ label > div {
     .f_box {gap: 20px;}
     .title_box img {width: 100px;}
     .a_b_type, .o_ab_type {flex-direction: column;}
-    .c_b_type_box {margin-right: 20px;}
+    /* .c_b_type_box {margin-right: 20px;} */
     .c_b_type_box, .c_name_box, .c_gender_box, .c_birth_box, .c_body_box {flex-direction: column; justify-content: flex-start;}
 }
 @media (max-width: 400px) {
@@ -352,7 +352,7 @@ input[name="rg_c"]:checked ~ label > div {
 }
 @media (max-width: 360px) {
     .f_box {flex-direction: column;}
-    .c_gender_box {margin-right: 20px;}
+    /* .c_gender_box {margin-right: 20px;} */
 }
 @media (max-width: 350px) {
     .t_box {justify-content: flex-start; box-sizing: border-box;}
