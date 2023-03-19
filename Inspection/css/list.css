@@ -135,6 +135,7 @@
     border: none;
     font-size: 14px;
 }
+.last_result { display: none; }
 
 .pn_active {
     background-color: #ed5c27;
@@ -200,16 +201,23 @@
     z-index: 99;
 }
 .tab_box {
-    position: relative;
+    /* position: relative;
     bottom: -50px;
-    right: 0;
+    right: 0; */
     z-index: 99;
     width: 100%;
-    height: 40px;
+    /* height: 40px; */
+    padding-top: 46px;
+    box-sizing: border-box;
+
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
     
 }
 .tab_box label {
-    display: inline-block;
+    /* display: inline-block; */
     width: 100%;
     max-width: 240px;
     height: 40px;
@@ -225,30 +233,19 @@
     border: none;
     font-size: 14px;
 }
-.prev_page {
-    position: absolute;
-    left: 37%;
-    opacity: 0;
-    display: none !important;
-}
-.next_page1 {
-    position: absolute;
-    left: 37%;
-    z-index: 99;
-}
+
 .next_page2 {
-    position: absolute;
-    left: 37%;
-    opacity: 0;
-    z-index: 9;
+    display: none ;
 }
+.prev_page3_1 {display: none;}
+.prev_page2_1 {display: none;}
 
 input[name=page] {
     opacity: 0;
 }
 
 
-
+#next { display: none; }
 #page3:checked ~ #pan,
 #page2:checked ~ #pan_cancer,
 #page1:checked ~ #pan_pc {
@@ -417,7 +414,7 @@ input[name=page] {
     }
     .pn_button {
         height: 40px;
-        margin-top: 20px;
+        /* margin-top: 20px; */
         font-size: 13px;
     }
     .q_list_tab {

@@ -60,8 +60,8 @@ input[type=text]  {
     margin: 30px 0;
 }
 .f_box {justify-content: center;}
-.s_box {justify-content: center; align-items: flex-start;}
-.t_box {justify-content: center;align-items: flex-start;}
+.s_box {justify-content: center; align-items: flex-end;}
+.t_box {justify-content: center;align-items: flex-end;}
 
 
 .c_name_box {justify-content: center;}
@@ -244,6 +244,17 @@ input[name="rg_c"]:checked ~ label > div {
     color: #262626;
 }
 
+.b_img_after,
+.b_img_before,
+.g_img_after,
+.gender_img > img:nth-of-type(1) {
+    width: 100%;
+    max-width: 50px;
+}
+.b_img_after,
+.g_img_after {display: none;}
+
+.r_gen_circle, .r_b_type_circle {position: absolute; top: 0; opacity: 0;}
 
 
 /* media 반응형 사이즈 css */
@@ -303,7 +314,7 @@ input[name="rg_c"]:checked ~ label > div {
     .f_box, .s_box, .t_box {margin: 0 0 15px 0;}
 }
 @media (max-width: 800px) {
-    .ccr_box {width: 100%; align-items: flex-start; margin-left: 60px;}
+    .ccr_box {width: 100%; align-items: center; margin-left: 60px;}
     .t_box {flex-wrap: wrap;}
 }
 @media (max-width: 667px) {

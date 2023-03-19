@@ -91,7 +91,7 @@ $(document).ready(function() {
     console.log(name)
     $('#id_name').html(name)
     $('input[name=index_name]').attr('value', name);
-
+    $('.next_page2').css({display: 'none'})
 
     $('.prev_page').click(function(){
         $('.prev_page').css({opacity: '1', zIndex: '99'})
@@ -102,14 +102,14 @@ $(document).ready(function() {
             bottom: '-100px',
         })
         $('.next_page1').html('다음')
+        history.back();
     })
     $('.next_page1').click(function(){
-        $('.prev_page').css({opacity: '0', zIndex: '9', display: 'none'})
-        $('.next_page1').css({right: '90px', zIndex: '9', opacity: '0'})
+        $('.next_page1').css({display: 'none'})
+        $('.prev_page').css({display: 'none'})
+        $('.prev_page2_1').css({display: 'inline-block'})
         $('.next_page2').css({
-            opacity: '1',
-            zIndex: '99',
-            bottom: '0',
+            display: 'inline-block'
         })
         $('#pan_pc').css({
             display: 'none'
@@ -121,16 +121,47 @@ $(document).ready(function() {
         $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );
     })
     $('.next_page2').click(function(){
-        $('.prev_page').css({opacity: '0', zIndex: '9', display: 'none'})
-        $('.next_page1').css({opacity: '0', zIndex: '9', display: 'none'})
+        $('.prev_page').css({display: 'none'})
+        $('.prev_page2_1').css({display: 'none'})
+        $('.prev_page3_1').css({display: 'block'})
+
+        $('.next_page2').css({display: 'none'})
+        $('.next_page1').css({display: 'none'})
         $('.next_page1').css({right: '0'})
-        $('.next_page2').css({
-            opacity: '0',
-            zIndex: '9',
-            bottom: '0',
-        })
+        $('.last_result').css({display: 'inline-block'})
 
         $('.pre_next').css({opacity:'1', zIndex: '99'})
+    })
+
+    $('.prev_page2_1').click(function(){
+        $('.position_r').css({height: 'auto'})
+        $('#pan_pc').css({display: 'block'})
+        $('#pan_cancer').css({display: 'none'})
+        $('#pan').css({display: 'none'})
+
+        $('.prev_page').css({display: 'inline-block'})
+        $('.prev_page2_1').css({display: 'none'})
+        $('.next_page2').css({display: 'none'})
+        $('.next_page1').css({display: 'inline-block'})
+        console.log("1번페이지")
+    })
+
+
+    $('.prev_page3_1').click(function(){
+        $('.position_r').css({height: 'auto'})
+        $('#pan_pc').css({display: 'none'})
+        $('#pan_cancer').css({display: 'block'})
+        $('#pan_cancer').css({opacity: '1'})
+        $('#pan').css({display: 'none'})
+
+        $('.prev_page').css({display: 'none'})
+        $('.prev_page2_1').css({display: 'inline-block'})
+        $('.prev_page3_1').css({display: 'none'})
+
+        $('.next_page2').css({display: 'inline-block'})
+        $('.next_page1').css({display: 'none'})
+        $('.last_result').css({display: 'none'})
+        console.log("2번페이지")
     })
 
     
