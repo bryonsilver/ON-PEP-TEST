@@ -125,19 +125,18 @@
 .pn_button {
     width: 100%;
     max-width: 240px;
-    height: 50px;
-    background-color: #ddd;
+    height: 40px;
+    background-color: #feb041;
     color: #fff;
-    text-shadow: 0px 0px 3px #555;
+    text-shadow: 0px 0px 3px #f3690c;
     border-radius: 10px;
     font-weight: 700;
     text-align: center;
-    line-height: 25px;
+    line-height: 40px;
     border: none;
     font-size: 14px;
-    margin-top: 0;
 }
-.last_result { display: none; margin-top: 32px; }
+.last_result { display: none; }
 
 .pn_active {
     background-color: #ed5c27;
@@ -230,19 +229,18 @@
     /* display: inline-block; */
     width: 100%;
     max-width: 240px;
-    height: 50px;
+    height: 40px;
     
-    background-color: #ddd;
+    background-color: #feb041;
     color: #fff;
-    text-shadow: 0px 0px 3px #555;
+    text-shadow: 0px 0px 3px #f3690c;
     border-radius: 10px;
     
     font-weight: 700;
     text-align: center;
-    line-height: 25px;
+    line-height: 40px;
     border: none;
     font-size: 14px;
-    cursor: pointer;
 }
 
 .next_page2 {
@@ -454,8 +452,10 @@ input[name=page] {
 }
 @media (max-width: 480px) {
     .content {
-        width: 80%;
+        width: 100%;
+        margin: 0 !important;
         padding: 0 20px;
+        box-sizing: border-box;
     }
     .ql_q_num, .ql_q_text {
         font-size: 13px;
