@@ -3,7 +3,7 @@ $(document).ready(function() {
     for(let i=0; i<12; i++) {
         let list = `<div class="q_list">
                         <div class="ql_question_box">
-                            <span class="ql_q_num"><span>${QUESTION[0][i].item_no}</span></span>
+                            <span class="ql_q_num"><span>Q${QUESTION[0][i].item_no}</span></span>
                             <span class="ql_q_text">${QUESTION[0][i].title}</span>
                         </div>
                         
@@ -24,7 +24,7 @@ $(document).ready(function() {
     for(let i=0; i<11; i++) {
         let list = `<div class="q_list">
                         <div class="ql_question_box">
-                            <span class="ql_q_num"><span>${QUESTION[1][i].item_no}</span></span>
+                            <span class="ql_q_num"><span>Q${QUESTION[1][i].item_no}</span></span>
                             <span class="ql_q_text">${QUESTION[1][i].title}</span>
                         </div>
                         
@@ -45,7 +45,7 @@ $(document).ready(function() {
     for(let i=0; i<11; i++) {
         let list = `<div class="q_list">
                         <div class="ql_question_box">
-                            <span class="ql_q_num"><span>${QUESTION[2][i].item_no}</span></span>
+                            <span class="ql_q_num"><span>Q${QUESTION[2][i].item_no}</span></span>
                             <span class="ql_q_text">${QUESTION[2][i].title}</span>
                         </div>
                         
@@ -64,12 +64,6 @@ $(document).ready(function() {
 
 
 
-
-
-        //문제 question의 버튼들을 누르면 색칠 되는 기능
-        $('.ql_a_text').click((function(){
-            alert(1)
-        }))
         
     $(document).on('click', '#page1', function(){
         $('.position_r').css({height: 'auto'})

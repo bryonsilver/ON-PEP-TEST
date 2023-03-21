@@ -54,17 +54,18 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 .ql_q_num {
-    width: 40px;
+    /* width: 40px;
     height: 40px;
     background-color: #feb041;
     color: #fff;
     text-shadow: 0px 0px 3px #f3690c; /* #ecc874 #feb041 */
-    border-radius: 20%;
+    /*border-radius: 20%;*/
 
-    font-size: 18px;
+    color: #787878;
+    font-size: 20px;
     font-weight: 800;
     text-align: center;
     line-height: 38px;
@@ -124,18 +125,19 @@
 .pn_button {
     width: 100%;
     max-width: 240px;
-    height: 40px;
-    background-color: #feb041;
+    height: 50px;
+    background-color: #ddd;
     color: #fff;
-    text-shadow: 0px 0px 3px #f3690c;
+    text-shadow: 0px 0px 3px #555;
     border-radius: 10px;
     font-weight: 700;
     text-align: center;
-    line-height: 40px;
+    line-height: 25px;
     border: none;
     font-size: 14px;
+    margin-top: 0;
 }
-.last_result { display: none; }
+.last_result { display: none; margin-top: 32px; }
 
 .pn_active {
     background-color: #ed5c27;
@@ -151,9 +153,15 @@
 
 
 /* 재 디자인 css */
-
 .q_list {
-    padding: 15px 0;
+    /* padding: 15px 0; */
+    border-bottom: 1px solid #888888;
+    background: rgba(255,255,255, 0.7);
+    border-radius: 20px;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px #b1b1b1;
+    margin-bottom: 20px;
     border-bottom: 1px solid #888888;
 }
 
@@ -178,9 +186,11 @@
 }
 .q_list_tab label span {
     word-break: break-all;
+    color: #414a56;
+    font-weight: 500;
 }
 .q_list_tab input:checked{
-    accent-color: rgb(49, 49, 49);
+    accent-color: #ee791c;
 }
 
 .position_r {
@@ -220,18 +230,19 @@
     /* display: inline-block; */
     width: 100%;
     max-width: 240px;
-    height: 40px;
+    height: 50px;
     
-    background-color: #feb041;
+    background-color: #ddd;
     color: #fff;
-    text-shadow: 0px 0px 3px #f3690c;
+    text-shadow: 0px 0px 3px #555;
     border-radius: 10px;
     
     font-weight: 700;
     text-align: center;
-    line-height: 40px;
+    line-height: 25px;
     border: none;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .next_page2 {
@@ -253,6 +264,9 @@ input[name=page] {
     z-index: 99;
 }
 
+
+.q_list_tab label input:checked + span{color: #ee791c; font-weight: 800;}
+.q_list_tab label input + span{color: #414a56; font-weight: 500;}
 
 
 /* footer */

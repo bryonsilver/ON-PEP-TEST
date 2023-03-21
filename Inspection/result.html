@@ -13,6 +13,7 @@
     
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/result.css">
+    <link rel="stylesheet" href="./css/scss/result_btn.css">
 </head>
 <body>
     <div class="on_shar_btn_box">
@@ -80,7 +81,9 @@
         </div>
         <div class="content">
             <div class="r_box_content">
-                <img src="./img/talk_b2.png" alt="talk_b_img" class="talk_b">
+                
+
+                <!-- <img src="./img/talk_b2.png" alt="talk_b_img" class="talk_b"> -->
                 <div class="result_text_box">
                     <div class="r_t_result_box">
                         <div class="rt_fixed">
@@ -92,12 +95,15 @@
                     </div>
                     <div class="r_t_text"><span class="r_span">" 3년 안에 "</span> 검사 받아야 합니다</div>
                 </div>
+                <div class="div_doc">
+                    <img src="./img/doctor6.png" alt="doctor_img" class="doctor">
+                    <img src="./img/doctor6_1.png" alt="doctor_img" class="doctor2">
+                </div>
+                <img src="./img/pancreas3.png" alt="pancreas_img" class="pancreas">
             </div>
 
             <div class="con_box">
-                <img src="./img/doctor6.png" alt="doctor_img" class="doctor">
-                <img src="./img/doctor6_1.png" alt="doctor_img" class="doctor2">
-                <img src="./img/pancreas3.png" alt="pancreas_img" class="pancreas">
+                
                 <div class="bar_box">
                     
                     <div class="flex_bar">
@@ -150,10 +156,10 @@
                     <div class="link_btn_box">
                         <div class="link_btn">
                             <div class="main_btn">
-                                <a href="./index.html"><span>검사 다시하기</span></a>
+                                <a href="./index.html" class="button">검사 다시하기</a>
                             </div>
                             <div class="test_shar_btn">
-                                <span>검사결과 공유하기</span>
+                                <span class="button">검사결과 공유하기</span>
     
                                 <!-- <div class="test_shar_btn_box">
                                     <ul class="snsList2">
@@ -175,7 +181,7 @@
                                 </div> -->
                             </div>
                             <div class="on_shar_btn">
-                                <span>ON : PEP Test 공유하기</span>
+                                <span class="button">ON : PEP Test 공유하기</span>
     
                                 <!-- <div class="on_shar_btn_box">
                                     <ul class="snsList">
@@ -296,6 +302,8 @@
             window.open(cUrl,'','width=600,height=300,top=100,left=100,scrollbars=yes');
         }
         
+
+        document.querySelectorAll('.button').forEach(button => button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>');
 
         
     </script>
