@@ -12,8 +12,12 @@
     <script defer src="./js/common.js"></script>
     
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="icon" href="./img/favicon2.png">
     <link rel="stylesheet" href="./css/result.css">
-    <link rel="stylesheet" href="./css/scss/result_btn.css">
+    <!-- <link rel="stylesheet" href="./css/scss/result_btn.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="on_shar_btn_box">
@@ -21,49 +25,51 @@
         <div class="div_p">
             <div class="on_top">
                 <div class="sns_title">ON : PEP Test 공유하기</div>
-                <div class="close"><img src="./img/close.png" alt="close_img" class="close_img"></div>
             </div>
             <ul class="snsList">
                 
                 <li class="link sns_a">
                     <a href="#n" onclick="clip('https:crystalplain.github.io/plain/Inspection/index.html'); return false; " id="link" title="링크복사">
-                        <span class="btn_link_a"><img src="./img/link2.png" alt="sns_link_img" class="sns_link_img"></span>
+                        <span class="btn_link_a"><img src="./img/copy_icon.png" alt="sns_link_img" class="sns_link_img">주소복사</span>
                     </a>
                 </li>
                 <li class="kakaotalk sns_a">
-                    <a href="javascript:ShareKakaoTalk()" title="카카오톡"><span class="btn_comm"  width="64"  ><img src="./img/kakao6.png" alt="kakaoTalk_img" class="kakao_talk_img"></span></a>
+                    <a href="javascript:ShareKakaoTalk()" title="카카오톡"><span class="btn_comm"  width="64"  ><img src="./img/kakao_2.png" alt="kakaoTalk_img" class="kakao_talk_img">카카오톡</span></a>
                 </li>
                 <li class="facebook sns_a">
-                    <a href="#" id="vIconFb" onclick="return false;"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
+                    <a href="#" id="vIconFb" onclick="return false;"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book_icon_1.png" alt="faceBook_img" class="face_book_img">페이스북</span></a>
                 </li>
                 <!--<li class="twitter">
                     <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw"></i>트위터</a>
                 </li> -->
             </ul>
+            
+                <div class="close">닫기</div>
         </div>
     </div>
     <div class="test_shar_btn_box">
         <div class="div_p">
             <div class="on_top">
                 <div class="sns_title">검사결과 공유하기</div>
-                <div class="close"><img src="./img/close.png" alt="close_img" class="close_img"></div>
             </div>
             <ul class="snsList2">
                 <li class="link sns_a">
                     <a href="#n" onclick="clip(); return false; " id="link" title="링크복사">
-                        <span class="btn_link_a"><img src="./img/link2.png" alt="sns_link_img" class="sns_link_img"></span>
+                        <span class="btn_link_a"><img src="./img/copy_icon.png" alt="sns_link_img" class="sns_link_img">주소복사</span>
                     </a>
                 </li>
                 <li class="kakaotalk sns_a">
-                    <a href="#"><span class="btn_comm" id="shareKa" width="64"  onclick="link_app('kakaotalk://kakaotalk/home','id362057947')"><img src="./img/kakao6.png" alt="kakao_talk_img" class="kakao_talk_img"></span></a>
+                    <a href="#"><span class="btn_comm" id="shareKa" width="64"  onclick="link_app('kakaotalk://kakaotalk/home','id362057947')"><img src="./img/kakao_img.png" alt="kakao_talk_img" class="kakao_talk_img">카카오톡</span></a>
                 </li>
                 <li class="fabook sns_a">
-                    <a href="#" class="btn_share_sns" id="sns_facebook" title="페이스북 연동 새창열기" onclick="shareSns('facebook');"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
+                    <a href="#" class="btn_share_sns" id="sns_facebook" title="페이스북 연동 새창열기" onclick="shareSns('facebook');"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book_icon_2.png" alt="faceBook_img" class="face_book_img">페이스북</span></a>
                 </li>
                 <!--<li class="twitter">
                     <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw"></i>트위터</a>
                 </li> -->
             </ul>
+            
+            <div class="close">닫기</div>
         </div>
     </div>
     <div class="wrap">
@@ -83,8 +89,10 @@
             <div class="r_box_content">
                 
 
-                <!-- <img src="./img/talk_b2.png" alt="talk_b_img" class="talk_b"> -->
-                <div class="result_text_box">
+                <!-- <object data="./img/speech_bubble.svg" width="600px" height="500px"></object> -->
+            
+                <div class="result_text_box" style="position:relative">
+                    <img src="./img/speech_bubble.svg" alt="말풍선 이미지" class="svg_img" >
                     <div class="r_t_result_box">
                         <div class="rt_fixed">
                             <div class="box">
@@ -94,7 +102,10 @@
                         </div>
                     </div>
                     <div class="r_t_text"><span class="r_span">" 3년 안에 "</span> 검사 받아야 합니다</div>
+                    
                 </div>
+
+                
                 <div class="div_doc">
                     <img src="./img/doctor6.png" alt="doctor_img" class="doctor">
                     <img src="./img/doctor6_1.png" alt="doctor_img" class="doctor2">
