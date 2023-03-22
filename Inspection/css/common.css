@@ -3,7 +3,119 @@
 body {
     margin: 0;
     color: #343539;
+    font-family: 'Ubuntu', 'S-Core_Dream' !important;
 }
+
+/* Ubuntu */
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../font/Ubuntu/Ubuntu-Light.ttf) format('ttf'),
+        url(../font/Ubuntu/Ubuntu-Light.otf) format('otf'),
+        url(../font/Ubuntu/Ubuntu-Light.woff) format('woff');
+    font-weight: Light;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../font/Ubuntu/Ubuntu-Regular.ttf) format('ttf'),
+        url(../font/Ubuntu/Ubuntu-Regular.otf) format('otf'),
+        url(../font/Ubuntu/Ubuntu-Regular.woff) format('woff');
+    font-weight: Regular;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../font/Ubuntu/Ubuntu-Medium.ttf) format('ttf'),
+        url(../font/Ubuntu/Ubuntu-Medium.otf) format('otf'),
+        url(../font/Ubuntu/Ubuntu-Medium.woff) format('woff');
+    font-weight: Medium;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../font/Ubuntu/Ubuntu-Bold.ttf) format('ttf'),
+        url(../font/Ubuntu/Ubuntu-Bold.otf) format('otf'),
+        url(../font/Ubuntu/Ubuntu-Bold.woff) format('woff');
+    font-weight: Bold;
+    font-style: normal;
+}
+
+
+/* S-Core_Dream */
+@font-face {
+    font-family: 'S-Core_Dream';
+    src: url(../font/S-Core_Dream_OTF/SCDream1.ttf) format('ttf'),
+        url(../font/S-Core_Dream_OTF/SCDream1.otf) format('otf'),
+        url(../font/S-Core_Dream_OTF/SCDream1.woff) format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-Core_Dream';
+    src: url(../font/S-Core_Dream_OTF/SCDream2.ttf) format('ttf'),
+        url(../font/S-Core_Dream_OTF/SCDream2.otf) format('otf'),
+        url(../font/S-Core_Dream_OTF/SCDream2.woff) format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-Core_Dream';
+    src: url(../font/S-Core_Dream_OTF/SCDream3.ttf) format('ttf'),
+        url(../font/S-Core_Dream_OTF/SCDream3.otf) format('otf'),
+        url(../font/S-Core_Dream_OTF/SCDream3.woff) format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-Core_Dream';
+    src: url(../font/S-Core_Dream_OTF/SCDream4.ttf) format('ttf'),
+        url(../font/S-Core_Dream_OTF/SCDream4.otf) format('otf'),
+        url(../font/S-Core_Dream_OTF/SCDream4.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-Core_Dream';
+    src: url(../font/S-Core_Dream_OTF/SCDream5.ttf) format('ttf'),
+        url(../font/S-Core_Dream_OTF/SCDream5.otf) format('otf'),
+        url(../font/S-Core_Dream_OTF/SCDream5.woff) format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-Core_Dream';
+    src: url(../font/S-Core_Dream_OTF/SCDream6.ttf) format('ttf'),
+        url(../font/S-Core_Dream_OTF/SCDream6.otf) format('otf'),
+        url(../font/S-Core_Dream_OTF/SCDream6.woff) format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-Core_Dream';
+    src: url(../font/S-Core_Dream_OTF/SCDream7.ttf) format('ttf'),
+        url(../font/S-Core_Dream_OTF/SCDream7.otf) format('otf'),
+        url(../font/S-Core_Dream_OTF/SCDream7.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-Core_Dream';
+    src: url(../font/S-Core_Dream_OTF/SCDream8.ttf) format('ttf'),
+        url(../font/S-Core_Dream_OTF/SCDream8.otf) format('otf'),
+        url(../font/S-Core_Dream_OTF/SCDream8.woff) format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-Core_Dream';
+    src: url(../font/S-Core_Dream_OTF/SCDream9.ttf) format('ttf'),
+        url(../font/S-Core_Dream_OTF/SCDream9.otf) format('otf'),
+        url(../font/S-Core_Dream_OTF/SCDream9.woff) format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
 ul {
     margin: 0;
     padding: 0;
