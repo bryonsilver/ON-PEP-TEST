@@ -200,5 +200,130 @@ $(document).ready(function() {
             d_height = $(document).height();
         }
     })
+
+
+
+    // name, gender, b_type, year, month, day, age, height, wegiht, bsa, bmi
+
+    const urlParams1 = new URL(location.href).searchParams;
+    const gender = urlParams.get('gender');
+    
+    const urlParams2 = new URL(location.href).searchParams;
+    const b_type = urlParams.get('b_type');
+    
+    const urlParams3 = new URL(location.href).searchParams;
+    const year = urlParams.get('year');
+
+    const urlParams4 = new URL(location.href).searchParams;
+    const month = urlParams.get('month');
+
+    const urlParams5 = new URL(location.href).searchParams;
+    const day = urlParams.get('day');
+
+    const urlParams6 = new URL(location.href).searchParams;
+    const age = urlParams.get('age');
+
+    const urlParams7 = new URL(location.href).searchParams;
+    const height = urlParams.get('height');
+
+    const urlParams8 = new URL(location.href).searchParams;
+    const weight = urlParams.get('weight');
+
+    const urlParams9 = new URL(location.href).searchParams;
+    const bsa = urlParams.get('bsa');
+
+    const urlParams10 = new URL(location.href).searchParams;
+    const bmi = urlParams.get('bmi');
+    console.log('name :', name)
+    console.log('gender :', gender)
+    console.log('b_type :', b_type)
+    console.log('year :', year)
+    console.log('month :', month)
+    console.log('day :', day)
+    console.log('height :', height)
+    console.log('weight :', weight)
+    console.log('bsa :', bsa)
+    console.log('bmi :', bmi)
+    console.log('age :', age)
+
+
+    // if ($('input:radio[name="pan_pc_1"]:checked').val()) {
+    //     console.log('되어있어요!!')
+    //     return false;
+    // } else {
+    //     console.log("안돼..ㅠ")
+    // }
+
+    const searchParams = new URLSearchParams(location.search);
+    for (const param of searchParams) {
+        if(param[1] == 'women') {
+            $("#pan_pc_Sex2").attr('disabled',true);
+        } else if (param[1] == 'men') {
+            $("#pan_pc_Sex1").attr('disabled',true);
+        } else if (param[0] == 'age') {
+            var param_n = Number(param[1])
+            if(param_n < 55) {
+                $("#pan_pc_Age2").attr('disabled',true);
+            } 
+            else{
+                $("#pan_pc_Age1").attr('disabled',true);
+            }
+        } else if (param[0] == 'bmi') {
+            var param_bmi = Number(param[1])
+            if(param_bmi < 25) {
+                $("#pan_pc_Obesity2").attr('disabled',true);
+                $("#pan_pc_Obesity3").attr('disabled',true);
+                $("#pan_pc_Obesity4").attr('disabled',true);
+            } else if(param_bmi <= 29) {
+                $("#pan_pc_Obesity1").attr('disabled',true);
+                $("#pan_pc_Obesity3").attr('disabled',true);
+                $("#pan_pc_Obesity4").attr('disabled',true);
+            } else if (param_bmi <= 30) {
+                $("#pan_pc_Obesity1").attr('disabled',true);
+                $("#pan_pc_Obesity2").attr('disabled',true);
+                $("#pan_pc_Obesity4").attr('disabled',true);
+            } else if (param_bmi <= 35) {
+                $("#pan_pc_Obesity1").attr('disabled',true);
+                $("#pan_pc_Obesity2").attr('disabled',true);
+                $("#pan_pc_Obesity3").attr('disabled',true);
+            }
+        }
+        else if (param[0] == 'bsa') {
+            var param_bsa = Number(param[1])
+            if(param_bsa <= 1.60) {
+                $("#pan_pc_bsa2").attr('disabled',true);
+                $("#pan_pc_bsa3").attr('disabled',true);
+            } else if(param_bsa <= 1.90) {
+                $("#pan_pc_bsa1").attr('disabled',true);
+                $("#pan_pc_bsa3").attr('disabled',true);
+            } else if (param_bsa >= 1.91) {
+                $("#pan_pc_bsa1").attr('disabled',true);
+                $("#pan_pc_bsa2").attr('disabled',true);
+            }
+        }
+        else if (param[0] == 'b_type') {
+            if(param[1] == 'O_type' ) {
+                $("#pan_pc_Blood1").attr('disabled',true);
+            } else {
+                $("#pan_pc_Blood2").attr('disabled',true);
+            }
+        }
+    }
+
+
+
+
+    // $('.next_page1').click(function(e) {
+    //     // $('#name_text').val().length === 0  && $('#year').val().length === 0 && $('#month').val().length === 0 && $('#day').val().length === 0 && $('#height').val().length === 0 && $('#weight').val().length === 0 && $('#bmi').val().length === 0 && $('#bsa').val().length === 0 && $('#cr').val().length === 0 && $('#ccr').val().length === 0
+    //     var chk = $(':radio[name="pan_pc_4"]').is(":checked");
+    //     if (!chk) {
+    //         alert('정보를 전부 입력해야 됩니다 1');
+    //         $('.next_page1').preventDefault();
+    //     }
+    //     else {
+    //         alert("선택함")
+    //         $(this).unbind('click', preventDefault);
+    //     }
+    // })
 })
 
