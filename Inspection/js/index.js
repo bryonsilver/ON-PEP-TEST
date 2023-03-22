@@ -139,35 +139,35 @@ $('.AB_type > .ab_before').on('click', function(e){
 $('#btn_test').click(function(e) {
     // $('#name_text').val().length === 0  && $('#year').val().length === 0 && $('#month').val().length === 0 && $('#day').val().length === 0 && $('#height').val().length === 0 && $('#weight').val().length === 0 && $('#bmi').val().length === 0 && $('#bsa').val().length === 0 && $('#cr').val().length === 0 && $('#ccr').val().length === 0
     if ($('#name_text').val().length === 0) {
-        alert('정보를 전부 입력해야 됩니다 1');
+        alert('정보를 전부 입력해야 됩니다');
         console.log("잘되고 있냐?")
         e.preventDefault();
     } else if ($('#year').val().length === 0) {
-        alert('정보를 전부 입력해야 됩니다 2');
+        alert('정보를 전부 입력해야 됩니다');
         e.preventDefault();
     } else if ($('#month').val().length === 0) {
-        alert('정보를 전부 입력해야 됩니다 3');
+        alert('정보를 전부 입력해야 됩니다');
         e.preventDefault();
     } else if ($('#day').val().length === 0) {
-        alert('정보를 전부 입력해야 됩니다 4');
+        alert('정보를 전부 입력해야 됩니다');
         e.preventDefault();
     } else if ($('#height').val().length === 0) {
-        alert('정보를 전부 입력해야 됩니다 5');
+        alert('정보를 전부 입력해야 됩니다');
         e.preventDefault();
     } else if ($('#weight').val().length === 0) {
-        alert('정보를 전부 입력해야 됩니다 6');
+        alert('정보를 전부 입력해야 됩니다');
         e.preventDefault();
     } else if ($('#bmi').val().length === 0) {
-        alert('정보를 전부 입력해야 됩니다 7');
+        alert('정보를 전부 입력해야 됩니다');
         e.preventDefault();
     } else if ($('#bsa').val().length === 0) {
-        alert('정보를 전부 입력해야 됩니다 8');
+        alert('정보를 전부 입력해야 됩니다');
         e.preventDefault();
     } else if ($('#cr').val().length === 0) {
-        alert('정보를 전부 입력해야 됩니다 9');
+        alert('정보를 전부 입력해야 됩니다');
         e.preventDefault();
     } else if ($('#ccr').val().length === 0) {
-        alert('정보를 전부 입력해야 됩니다 10');
+        alert('정보를 전부 입력해야 됩니다');
         e.preventDefault();
     }
     else {
