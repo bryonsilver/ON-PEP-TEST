@@ -17,7 +17,7 @@
     top: 220px;
 }
 .list_img {
-    width: 50%;
+    width: 100%;
     opacity: 0.15;
     min-width: 500px;
 }
@@ -125,23 +125,22 @@
 .pn_button {
     width: 100%;
     max-width: 240px;
-    height: 40px;
-    background-color: #feb041;
+    /* height: 40px; */
+    /* background-color: #feb041; */
     color: #fff;
-    text-shadow: 0px 0px 3px #f3690c;
+    /* text-shadow: 0px 0px 3px #f3690c; */
     border-radius: 10px;
     font-weight: 700;
     text-align: center;
     line-height: 40px;
     border: none;
     font-size: 14px;
+    border: 2.5px solid #feb041;
+    border-radius: 27px;
 }
 .last_result { display: none; }
 
-.pn_active {
-    background-color: #ed5c27;
-    color: #ffffff;
-}
+
 .pre_next input {
     display: none;
 }
@@ -176,12 +175,14 @@
     width: 100%;
     max-width: 20px;
     height: 20px;
+    cursor: pointer;
 
     margin-right: 10px;
 }
 .q_list_tab label {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
 .q_list_tab label span {
     word-break: break-all;
@@ -224,15 +225,31 @@
     justify-content: center;
     align-items: center;
     
+
+    overflow: hidden;
+    
+}
+.b_m_box {
+    width: 100%;
+    max-width: 240px;
+    height: 50px;
+    display: none;
+    background-color: #feb041;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: center;
 }
 .tab_box label {
     /* display: inline-block; */
     width: 100%;
     max-width: 240px;
-    height: 40px;
+    /* height: 40px; */
     
-    background-color: #feb041;
-    color: #fff;
+    /* background-color: #feb041; */
+    /* color: #fff; */
     text-shadow: 0px 0px 3px #f3690c;
     border-radius: 10px;
     
@@ -264,7 +281,7 @@ input[name=page] {
 
 
 .q_list_tab label input:checked + span{color: #ee791c; font-weight: 800;}
-.q_list_tab label input + span{color: #414a56; font-weight: 500;}
+.q_list_tab label input + span{color: #414a56; font-weight: 500; cursor: pointer;}
 
 
 /* footer */
@@ -308,7 +325,16 @@ input[name=page] {
     }
 }
 
+@media (max-width: 1200px) {
+    /* .b_m_box {display: inline-block;}
+    .bu_box {display: none;} */
+    button.learn-more .circle {width: 100% !important; color: #fff !important;}
+    button.learn-more .button-text {color: #fff !important;}
+    button.learn-more .circle .icon.arrow {background: #fff; transform: translate(1rem, 0);}
+
+}
 @media (max-width: 1080px) {
+    .content {width: 100%; padding:  0 20px; box-sizing: border-box;}
     .ql_answer_box {
         gap: 10px;
         flex-direction: column;
@@ -335,7 +361,7 @@ input[name=page] {
     .position_wrap {
         padding: 0px 10%;
     }
-    .list_img {width: 80%; min-width: 500px;}
+    .list_img {width: 100%; min-width: 500px;}
 }
 
 @media (max-width: 990px) {
@@ -386,7 +412,7 @@ input[name=page] {
     .next_page2 {
         left: 6%;
     }
-    .list_img {width: 80%; min-width: 200px;}
+    .list_img {width: 100%; min-width: 200px;}
 }
 
 @media (max-width: 590px) {
@@ -442,23 +468,24 @@ input[name=page] {
         padding: 0;
         left: 0px;
     }
-    .list_img {width: 100%; min-width: 470px;}
+    .list_img {width: 80%; min-width: 200px; 
+        transform: translateX(15%);}
 }
 
-@media(max-width: 500px) {
-    .position_wrap {
-        left: -30px;
-    }
-}
 @media (max-width: 480px) {
+    .tab_box label {max-width: 160px;}
+    button.learn-more {width: 9rem;}
     .content {
         width: 100%;
         margin: 0 !important;
         padding: 0 20px;
         box-sizing: border-box;
     }
-    .ql_q_num, .ql_q_text {
-        font-size: 13px;
+    .ql_q_text {
+        font-size: 14px;
+    }
+    .ql_q_num {
+        font-size: 16px;
     }
     .prev_page,
     .next_page1,
@@ -479,9 +506,6 @@ input[name=page] {
     .next_page2 {
         left: 9%;
     }
-    .position_wrap {
-        left: -60px;
-    }
 }
 @media(max-width: 390px) {
     .prev_page,
@@ -496,6 +520,10 @@ input[name=page] {
     .next_page2 {
         left: 4%;
     }
+    .tab_box {flex-direction: column;}
+    .tab_box label {max-width: 100%;}
+    button.learn-more {width: 100%;}
+    button.learn-more .button-text {margin: 0 0 0 0.5rem;}
 }
 @media(max-width: 360px) {
     .prev_page,
@@ -513,5 +541,10 @@ input[name=page] {
     .position_r {
         margin: 10px 0;
     }
-    .position_wrap {top: 170px;}
+    .position_wrap {top: 220px;}
+    .list_img {
+        width: 100%;
+        min-width: 400px;
+        transform: translateX(-10%);
+    }
 }

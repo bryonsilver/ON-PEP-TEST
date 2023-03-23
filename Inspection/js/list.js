@@ -108,8 +108,10 @@ $(document).ready(function() {
         $('#pan_pc').css({
             display: 'none'
         })
+        $('#dis').css({opacity: 1})
         $('#pan_cancer').css({
-            display: 'inline-block'
+            display: 'inline-block',
+            opacity: 1,
         })
         
         $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );
@@ -125,6 +127,20 @@ $(document).ready(function() {
         $('.last_result').css({display: 'inline-block'})
 
         $('.pre_next').css({opacity:'1', zIndex: '99'})
+
+
+
+        $('#pan_pc').css({
+            display: 'none'
+        })
+        $('#dis').css({opacity: 0})
+        $('#pan_cancer').css({
+            display: 'none',
+            opacity: 0,
+        })
+        $('#pan').css({
+            display: 'block'
+        })
     })
 
     $('.prev_page2_1').click(function(){
@@ -257,55 +273,103 @@ $(document).ready(function() {
     const searchParams = new URLSearchParams(location.search);
     for (const param of searchParams) {
         if(param[1] == 'women') {
-            $("#pan_pc_Sex2").attr('disabled',true);
+            $("#pan_pc_Sex2").css('display', 'none');
+            $("#pan_pc_Sex2").parent('label').css('display', 'none');
+            
         } else if (param[1] == 'men') {
-            $("#pan_pc_Sex1").attr('disabled',true);
+            $("#pan_pc_Sex1").css('display', 'none');
+            $("#pan_pc_Sex1").parent('label').css('display', 'none');
+            
         } else if (param[0] == 'age') {
             var param_n = Number(param[1])
             if(param_n < 55) {
-                $("#pan_pc_Age2").attr('disabled',true);
+                $("#pan_pc_Age2").css('display', 'none');
+                $("#pan_pc_Age2").parent('label').css('display', 'none');
+                
             } 
             else{
-                $("#pan_pc_Age1").attr('disabled',true);
+                $("#pan_pc_Age1").css('display', 'none');
+                $("#pan_pc_Age1").parent('label').css('display', 'none');
+                
             }
         } else if (param[0] == 'bmi') {
             var param_bmi = Number(param[1])
             if(param_bmi < 25) {
-                $("#pan_pc_Obesity2").attr('disabled',true);
-                $("#pan_pc_Obesity3").attr('disabled',true);
-                $("#pan_pc_Obesity4").attr('disabled',true);
+                $("#pan_pc_Obesity2").css('display', 'none');
+                $("#pan_pc_Obesity2").parent('label').css('display', 'none');
+                
+                $("#pan_pc_Obesity3").css('display', 'none');
+                $("#pan_pc_Obesity3").parent('label').css('display', 'none');
+                
+                $("#pan_pc_Obesity4").css('display', 'none');
+                $("#pan_pc_Obesity4").parent('label').css('display', 'none');
+                
             } else if(param_bmi <= 29) {
-                $("#pan_pc_Obesity1").attr('disabled',true);
-                $("#pan_pc_Obesity3").attr('disabled',true);
-                $("#pan_pc_Obesity4").attr('disabled',true);
+                $("#pan_pc_Obesity1").css('display', 'none');
+                $("#pan_pc_Obesity1").parent('label').css('display', 'none');
+                
+                $("#pan_pc_Obesity3").css('display', 'none');
+                $("#pan_pc_Obesity3").parent('label').css('display', 'none');
+                
+                $("#pan_pc_Obesity4").css('display', 'none');
+                $("#pan_pc_Obesity4").parent('label').css('display', 'none');
+                
             } else if (param_bmi <= 30) {
-                $("#pan_pc_Obesity1").attr('disabled',true);
-                $("#pan_pc_Obesity2").attr('disabled',true);
-                $("#pan_pc_Obesity4").attr('disabled',true);
+                $("#pan_pc_Obesity1").css('display', 'none');
+                $("#pan_pc_Obesity1").parent('label').css('display', 'none');
+                
+                $("#pan_pc_Obesity2").css('display', 'none');
+                $("#pan_pc_Obesity2").parent('label').css('display', 'none');
+                
+                $("#pan_pc_Obesity4").css('display', 'none');
+                $("#pan_pc_Obesity4").parent('label').css('display', 'none');
+                
             } else if (param_bmi <= 35) {
-                $("#pan_pc_Obesity1").attr('disabled',true);
-                $("#pan_pc_Obesity2").attr('disabled',true);
-                $("#pan_pc_Obesity3").attr('disabled',true);
+                $("#pan_pc_Obesity1").css('display', 'none');
+                $("#pan_pc_Obesity1").parent('label').css('display', 'none');
+                
+                $("#pan_pc_Obesity2").css('display', 'none');
+                $("#pan_pc_Obesity2").parent('label').css('display', 'none');
+                
+                $("#pan_pc_Obesity3").css('display', 'none');
+                $("#pan_pc_Obesity3").parent('label').css('display', 'none');
+                
             }
         }
         else if (param[0] == 'bsa') {
             var param_bsa = Number(param[1])
             if(param_bsa <= 1.60) {
-                $("#pan_pc_bsa2").attr('disabled',true);
-                $("#pan_pc_bsa3").attr('disabled',true);
+                $("#pan_pc_bsa2").css('display', 'none');
+                $("#pan_pc_bsa2").parent('label').css('display', 'none');
+                
+                $("#pan_pc_bsa3").css('display', 'none');
+                $("#pan_pc_bsa3").parent('label').css('display', 'none');
+                
             } else if(param_bsa <= 1.90) {
-                $("#pan_pc_bsa1").attr('disabled',true);
-                $("#pan_pc_bsa3").attr('disabled',true);
+                $("#pan_pc_bsa1").css('display', 'none');
+                $("#pan_pc_bsa1").parent('label').css('display', 'none');
+                
+                $("#pan_pc_bsa3").css('display', 'none');
+                $("#pan_pc_bsa3").parent('label').css('display', 'none');
+                
             } else if (param_bsa >= 1.91) {
-                $("#pan_pc_bsa1").attr('disabled',true);
-                $("#pan_pc_bsa2").attr('disabled',true);
+                $("#pan_pc_bsa1").css('display', 'none');
+                $("#pan_pc_bsa1").parent('label').css('display', 'none');
+                
+                $("#pan_pc_bsa2").css('display', 'none');
+                $("#pan_pc_bsa2").parent('label').css('display', 'none');
+                
             }
         }
         else if (param[0] == 'b_type') {
             if(param[1] == 'O_type' ) {
-                $("#pan_pc_Blood1").attr('disabled',true);
+                $("#pan_pc_Blood1").css('display', 'none');
+                $("#pan_pc_Blood1").parent('label').css('display', 'none');
+                
             } else {
-                $("#pan_pc_Blood2").attr('disabled',true);
+                $("#pan_pc_Blood2").css('display', 'none');
+                $("#pan_pc_Blood2").parent('label').css('display', 'none');
+                
             }
         }
     }
@@ -313,17 +377,616 @@ $(document).ready(function() {
 
 
 
-    // $('.next_page1').click(function(e) {
-    //     // $('#name_text').val().length === 0  && $('#year').val().length === 0 && $('#month').val().length === 0 && $('#day').val().length === 0 && $('#height').val().length === 0 && $('#weight').val().length === 0 && $('#bmi').val().length === 0 && $('#bsa').val().length === 0 && $('#cr').val().length === 0 && $('#ccr').val().length === 0
-    //     var chk = $(':radio[name="pan_pc_4"]').is(":checked");
-    //     if (!chk) {
-    //         alert('정보를 전부 입력해야 됩니다 1');
-    //         $('.next_page1').preventDefault();
-    //     }
-    //     else {
-    //         alert("선택함")
-    //         $(this).unbind('click', preventDefault);
-    //     }
-    // })
+    $('.next_page1').click(function(e) {
+        // $('#name_text').val().length === 0  && $('#year').val().length === 0 && $('#month').val().length === 0 && $('#day').val().length === 0 && $('#height').val().length === 0 && $('#weight').val().length === 0 && $('#bmi').val().length === 0 && $('#bsa').val().length === 0 && $('#cr').val().length === 0 && $('#ccr').val().length === 0
+        var chk = $(':radio[name="pan_pc_4"]').is(":checked");
+        var chk2 = $(':radio[name="pan_pc_5"]').is(":checked");
+        var chk3 = $(':radio[name="pan_pc_6"]').is(":checked");
+        var chk4 = $(':radio[name="pan_pc_7"]').is(":checked");
+        var chk5 = $(':radio[name="pan_pc_8"]').is(":checked");
+        var chk6 = $(':radio[name="pan_pc_9"]').is(":checked");
+        var chk7 = $(':radio[name="pan_pc_10"]').is(":checked");
+        var chk8 = $(':radio[name="pan_pc_11"]').is(":checked");
+        var chk9 = $(':radio[name="pan_pc_12"]').is(":checked");
+        if (!chk) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.next_page1').css({display: 'inline-block'})
+            $('.prev_page').css({display: 'inline-block'})
+            $('.prev_page2_1').css({display: 'none'})
+            $('.next_page2').css({
+                display: 'none'
+            })
+            $('#pan_pc').css({
+                display: 'inline-block'
+            })
+            $('#dis').css({opacity: 0})
+            $('#pan_cancer').css({
+                display: 'none',
+                opacity: 0,
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );
+        }
+        else if (!chk2) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.next_page1').css({display: 'inline-block'})
+            $('.prev_page').css({display: 'inline-block'})
+            $('.prev_page2_1').css({display: 'none'})
+            $('.next_page2').css({
+                display: 'none'
+            })
+            $('#pan_pc').css({
+                display: 'inline-block'
+            })
+            $('#dis').css({opacity: 0})
+            $('#pan_cancer').css({
+                display: 'none',
+                opacity: 0,
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk3) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.next_page1').css({display: 'inline-block'})
+            $('.prev_page').css({display: 'inline-block'})
+            $('.prev_page2_1').css({display: 'none'})
+            $('.next_page2').css({
+                display: 'none'
+            })
+            $('#pan_pc').css({
+                display: 'inline-block'
+            })
+            $('#dis').css({opacity: 0})
+            $('#pan_cancer').css({
+                display: 'none',
+                opacity: 0,
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk4) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.next_page1').css({display: 'inline-block'})
+            $('.prev_page').css({display: 'inline-block'})
+            $('.prev_page2_1').css({display: 'none'})
+            $('.next_page2').css({
+                display: 'none'
+            })
+            $('#pan_pc').css({
+                display: 'inline-block'
+            })
+            $('#dis').css({opacity: 0})
+            $('#pan_cancer').css({
+                display: 'none',
+                opacity: 0,
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk5) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.next_page1').css({display: 'inline-block'})
+            $('.prev_page').css({display: 'inline-block'})
+            $('.prev_page2_1').css({display: 'none'})
+            $('.next_page2').css({
+                display: 'none'
+            })
+            $('#pan_pc').css({
+                display: 'inline-block'
+            })
+            $('#dis').css({opacity: 0})
+            $('#pan_cancer').css({
+                display: 'none',
+                opacity: 0,
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk6) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.next_page1').css({display: 'inline-block'})
+            $('.prev_page').css({display: 'inline-block'})
+            $('.prev_page2_1').css({display: 'none'})
+            $('.next_page2').css({
+                display: 'none'
+            })
+            $('#pan_pc').css({
+                display: 'inline-block'
+            })
+            $('#dis').css({opacity: 0})
+            $('#pan_cancer').css({
+                display: 'none',
+                opacity: 0,
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk7) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.next_page1').css({display: 'inline-block'})
+            $('.prev_page').css({display: 'inline-block'})
+            $('.prev_page2_1').css({display: 'none'})
+            $('.next_page2').css({
+                display: 'none'
+            })
+            $('#pan_pc').css({
+                display: 'inline-block'
+            })
+            $('#dis').css({opacity: 0})
+            $('#pan_cancer').css({
+                display: 'none',
+                opacity: 0,
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk8) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.next_page1').css({display: 'inline-block'})
+            $('.prev_page').css({display: 'inline-block'})
+            $('.prev_page2_1').css({display: 'none'})
+            $('.next_page2').css({
+                display: 'none'
+            })
+            $('#pan_pc').css({
+                display: 'inline-block'
+            })
+            $('#dis').css({opacity: 0})
+            $('#pan_cancer').css({
+                display: 'none',
+                opacity: 0,
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk9) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.next_page1').css({display: 'inline-block'})
+            $('.prev_page').css({display: 'inline-block'})
+            $('.prev_page2_1').css({display: 'none'})
+            $('.next_page2').css({
+                display: 'none'
+            })
+            $('#pan_pc').css({
+                display: 'inline-block'
+            })
+            $('#dis').css({opacity: 0})
+            $('#pan_cancer').css({
+                display: 'none',
+                opacity: 0,
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else {
+            console.log("선택함")
+        }
+    })
+
+
+
+    $('.next_page2').click(function(e) {
+        // $('#name_text').val().length === 0  && $('#year').val().length === 0 && $('#month').val().length === 0 && $('#day').val().length === 0 && $('#height').val().length === 0 && $('#weight').val().length === 0 && $('#bmi').val().length === 0 && $('#bsa').val().length === 0 && $('#cr').val().length === 0 && $('#ccr').val().length === 0
+        var chk2_1 = $(':radio[name="pc_13"]').is(":checked");
+        var chk2_2 = $(':radio[name="pc_14"]').is(":checked");
+        var chk2_3 = $(':radio[name="pc_15"]').is(":checked");
+        var chk2_4 = $(':radio[name="pc_16"]').is(":checked");
+        var chk2_5 = $(':radio[name="pc_17"]').is(":checked");
+        var chk2_6 = $(':radio[name="pc_18"]').is(":checked");
+        var chk2_7 = $(':radio[name="pc_19"]').is(":checked");
+        var chk2_8 = $(':radio[name="pc_20"]').is(":checked");
+        var chk2_9 = $(':radio[name="pc_21"]').is(":checked");
+        var chk2_10 = $(':radio[name="pc_22"]').is(":checked");
+        var chk2_11 = $(':radio[name="pc_23"]').is(":checked");
+        if (!chk2_1) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.prev_page').css({display: 'none'})
+            $('.prev_page2_1').css({display: 'inline-block'})
+            $('.prev_page3_1').css({display: 'none'})
+
+            $('.next_page2').css({display: 'none'})
+            $('.next_page1').css({display: 'inline-block'})
+            $('.next_page1').css({right: '1'})
+            $('.last_result').css({display: 'none'})
+
+            $('.pre_next').css({opacity:'0', zIndex: '9'})
+
+
+
+            $('#pan_pc').css({
+                display: 'none'
+            })
+            $('#dis').css({opacity: 1})
+            $('#pan_cancer').css({
+                display: 'inline-block',
+                opacity: 1,
+            })
+            $('#pan').css({
+                display: 'none'
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );
+        }
+        else if (!chk2_2) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.prev_page').css({display: 'none'})
+            $('.prev_page2_1').css({display: 'inline-block'})
+            $('.prev_page3_1').css({display: 'none'})
+
+            $('.next_page2').css({display: 'none'})
+            $('.next_page1').css({display: 'inline-block'})
+            $('.next_page1').css({right: '1'})
+            $('.last_result').css({display: 'none'})
+
+            $('.pre_next').css({opacity:'0', zIndex: '9'})
+
+
+
+            $('#pan_pc').css({
+                display: 'none'
+            })
+            $('#dis').css({opacity: 1})
+            $('#pan_cancer').css({
+                display: 'inline-block',
+                opacity: 1,
+            })
+            $('#pan').css({
+                display: 'none'
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk2_3) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.prev_page').css({display: 'none'})
+            $('.prev_page2_1').css({display: 'inline-block'})
+            $('.prev_page3_1').css({display: 'none'})
+
+            $('.next_page2').css({display: 'none'})
+            $('.next_page1').css({display: 'inline-block'})
+            $('.next_page1').css({right: '1'})
+            $('.last_result').css({display: 'none'})
+
+            $('.pre_next').css({opacity:'0', zIndex: '9'})
+
+
+
+            $('#pan_pc').css({
+                display: 'none'
+            })
+            $('#dis').css({opacity: 1})
+            $('#pan_cancer').css({
+                display: 'inline-block',
+                opacity: 1,
+            })
+            $('#pan').css({
+                display: 'none'
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk2_4) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.prev_page').css({display: 'none'})
+            $('.prev_page2_1').css({display: 'inline-block'})
+            $('.prev_page3_1').css({display: 'none'})
+
+            $('.next_page2').css({display: 'none'})
+            $('.next_page1').css({display: 'inline-block'})
+            $('.next_page1').css({right: '1'})
+            $('.last_result').css({display: 'none'})
+
+            $('.pre_next').css({opacity:'0', zIndex: '9'})
+
+
+
+            $('#pan_pc').css({
+                display: 'none'
+            })
+            $('#dis').css({opacity: 1})
+            $('#pan_cancer').css({
+                display: 'inline-block',
+                opacity: 1,
+            })
+            $('#pan').css({
+                display: 'none'
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk2_5) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.prev_page').css({display: 'none'})
+            $('.prev_page2_1').css({display: 'inline-block'})
+            $('.prev_page3_1').css({display: 'none'})
+
+            $('.next_page2').css({display: 'none'})
+            $('.next_page1').css({display: 'inline-block'})
+            $('.next_page1').css({right: '1'})
+            $('.last_result').css({display: 'none'})
+
+            $('.pre_next').css({opacity:'0', zIndex: '9'})
+
+
+
+            $('#pan_pc').css({
+                display: 'none'
+            })
+            $('#dis').css({opacity: 1})
+            $('#pan_cancer').css({
+                display: 'inline-block',
+                opacity: 1,
+            })
+            $('#pan').css({
+                display: 'none'
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk2_6) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.prev_page').css({display: 'none'})
+            $('.prev_page2_1').css({display: 'inline-block'})
+            $('.prev_page3_1').css({display: 'none'})
+
+            $('.next_page2').css({display: 'none'})
+            $('.next_page1').css({display: 'inline-block'})
+            $('.next_page1').css({right: '1'})
+            $('.last_result').css({display: 'none'})
+
+            $('.pre_next').css({opacity:'0', zIndex: '9'})
+
+
+
+            $('#pan_pc').css({
+                display: 'none'
+            })
+            $('#dis').css({opacity: 1})
+            $('#pan_cancer').css({
+                display: 'inline-block',
+                opacity: 1,
+            })
+            $('#pan').css({
+                display: 'none'
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk2_7) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.prev_page').css({display: 'none'})
+            $('.prev_page2_1').css({display: 'inline-block'})
+            $('.prev_page3_1').css({display: 'none'})
+
+            $('.next_page2').css({display: 'none'})
+            $('.next_page1').css({display: 'inline-block'})
+            $('.next_page1').css({right: '1'})
+            $('.last_result').css({display: 'none'})
+
+            $('.pre_next').css({opacity:'0', zIndex: '9'})
+
+
+
+            $('#pan_pc').css({
+                display: 'none'
+            })
+            $('#dis').css({opacity: 1})
+            $('#pan_cancer').css({
+                display: 'inline-block',
+                opacity: 1,
+            })
+            $('#pan').css({
+                display: 'none'
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk2_8) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.prev_page').css({display: 'none'})
+            $('.prev_page2_1').css({display: 'inline-block'})
+            $('.prev_page3_1').css({display: 'none'})
+
+            $('.next_page2').css({display: 'none'})
+            $('.next_page1').css({display: 'inline-block'})
+            $('.next_page1').css({right: '1'})
+            $('.last_result').css({display: 'none'})
+
+            $('.pre_next').css({opacity:'0', zIndex: '9'})
+
+
+
+            $('#pan_pc').css({
+                display: 'none'
+            })
+            $('#dis').css({opacity: 1})
+            $('#pan_cancer').css({
+                display: 'inline-block',
+                opacity: 1,
+            })
+            $('#pan').css({
+                display: 'none'
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk2_9) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.prev_page').css({display: 'none'})
+            $('.prev_page2_1').css({display: 'inline-block'})
+            $('.prev_page3_1').css({display: 'none'})
+
+            $('.next_page2').css({display: 'none'})
+            $('.next_page1').css({display: 'inline-block'})
+            $('.next_page1').css({right: '1'})
+            $('.last_result').css({display: 'none'})
+
+            $('.pre_next').css({opacity:'0', zIndex: '9'})
+
+
+
+            $('#pan_pc').css({
+                display: 'none'
+            })
+            $('#dis').css({opacity: 1})
+            $('#pan_cancer').css({
+                display: 'inline-block',
+                opacity: 1,
+            })
+            $('#pan').css({
+                display: 'none'
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk2_10) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.prev_page').css({display: 'none'})
+            $('.prev_page2_1').css({display: 'inline-block'})
+            $('.prev_page3_1').css({display: 'none'})
+
+            $('.next_page2').css({display: 'none'})
+            $('.next_page1').css({display: 'inline-block'})
+            $('.next_page1').css({right: '1'})
+            $('.last_result').css({display: 'none'})
+
+            $('.pre_next').css({opacity:'0', zIndex: '9'})
+
+
+
+            $('#pan_pc').css({
+                display: 'none'
+            })
+            $('#dis').css({opacity: 1})
+            $('#pan_cancer').css({
+                display: 'inline-block',
+                opacity: 1,
+            })
+            $('#pan').css({
+                display: 'none'
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk2_11) {
+            alert('정보를 전부 입력해야 됩니다');
+            $('.prev_page').css({display: 'none'})
+            $('.prev_page2_1').css({display: 'inline-block'})
+            $('.prev_page3_1').css({display: 'none'})
+
+            $('.next_page2').css({display: 'none'})
+            $('.next_page1').css({display: 'inline-block'})
+            $('.next_page1').css({right: '1'})
+            $('.last_result').css({display: 'none'})
+
+            $('.pre_next').css({opacity:'0', zIndex: '9'})
+
+
+
+            $('#pan_pc').css({
+                display: 'none'
+            })
+            $('#dis').css({opacity: 1})
+            $('#pan_cancer').css({
+                display: 'inline-block',
+                opacity: 1,
+            })
+            $('#pan').css({
+                display: 'none'
+            })
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else {
+            console.log("선택함");
+        }
+    })
+
+
+    $('.last_result').click(function(e) {
+        // $('#name_text').val().length === 0  && $('#year').val().length === 0 && $('#month').val().length === 0 && $('#day').val().length === 0 && $('#height').val().length === 0 && $('#weight').val().length === 0 && $('#bmi').val().length === 0 && $('#bsa').val().length === 0 && $('#cr').val().length === 0 && $('#ccr').val().length === 0
+        var chk3_1 = $(':radio[name="pan_24"]').is(":checked");
+        var chk3_2 = $(':radio[name="pan_25"]').is(":checked");
+        var chk3_3 = $(':radio[name="pan_26"]').is(":checked");
+        var chk3_4 = $(':radio[name="pan_27"]').is(":checked");
+        var chk3_5 = $(':radio[name="pan_28"]').is(":checked");
+        var chk3_6 = $(':radio[name="pan_29"]').is(":checked");
+        var chk3_7 = $(':radio[name="pan_30"]').is(":checked");
+        var chk3_8 = $(':radio[name="pan_31"]').is(":checked");
+        var chk3_9 = $(':radio[name="pan_32"]').is(":checked");
+        var chk3_10 = $(':radio[name="pan_33"]').is(":checked");
+        var chk3_11 = $(':radio[name="pan_34"]').is(":checked");
+        if (!chk3_1) {
+            alert('정보를 전부 입력해야 됩니다');
+            e.preventDefault();
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );
+        }
+        else if (!chk3_2) {
+            alert('정보를 전부 입력해야 됩니다');
+            e.preventDefault();
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk3_3) {
+            alert('정보를 전부 입력해야 됩니다');
+            e.preventDefault();
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk3_4) {
+            alert('정보를 전부 입력해야 됩니다');
+            e.preventDefault();
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk3_5) {
+            alert('정보를 전부 입력해야 됩니다');
+            e.preventDefault();
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk3_6) {
+            alert('정보를 전부 입력해야 됩니다');
+            e.preventDefault();
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk3_7) {
+            alert('정보를 전부 입력해야 됩니다');
+            e.preventDefault();
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk3_8) {
+            alert('정보를 전부 입력해야 됩니다');
+            e.preventDefault();
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk3_9) {
+            alert('정보를 전부 입력해야 됩니다');
+            e.preventDefault();
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk3_10) {
+            alert('정보를 전부 입력해야 됩니다');
+            e.preventDefault();
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else if (!chk3_11) {
+            alert('정보를 전부 입력해야 됩니다');
+            e.preventDefault();
+            
+            $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );reventDefault();
+        }
+        else {
+            console.log("선택함");
+        }
+    })
+    
 })
 

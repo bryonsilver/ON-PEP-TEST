@@ -20,7 +20,7 @@ input[type=text]  {
     margin-bottom: 150px;
 }
 .title_box img {
-    width: 170px;
+    width: 130px;
 }
 .title_box {
     width: 100%;
@@ -311,11 +311,16 @@ input[name="rg_c"]:checked ~ label > div {
     #cr {width: 50px;}
 }
 @media (max-width: 1000px) {
+    /* .bu_box {display: none;}
+    .b_m_box {display: inline-block;} */
+    button.learn-more .circle {width: 100% !important; color: #fff !important;}
+    button.learn-more .button-text {color: #fff !important;}
+    button.learn-more .circle .icon.arrow {background: #fff; transform: translate(1rem, 0);}
     .c_box,
     .title_box {
         font-size: 14px;
     }
-    .title_box img {width: 150px;}
+    .title_box img {width: 110px;}
     .ccr_in, .bmi_in, .bsa_in {width: 70px;}
 }
 
@@ -345,7 +350,7 @@ input[name="rg_c"]:checked ~ label > div {
 }
 @media (max-width: 580px) {
     .c_b_type_box {flex-direction: column; }
-    .title_box img {width: 130px;}
+    .title_box img {width: 90px;}
 }
 
 @media (max-width: 500px) {
@@ -362,7 +367,7 @@ input[name="rg_c"]:checked ~ label > div {
     .bu_box {margin-top: 30px;}
     .s_box, .t_box {gap: 20px;}
     .f_box {gap: 20px;}
-    .title_box img {width: 100px;}
+    .title_box img {width: 70px;}
     .a_b_type, .o_ab_type {flex-direction: column;}
     /* .c_b_type_box {margin-right: 20px;} */
     .c_b_type_box, .c_name_box, .c_gender_box, .c_birth_box, .c_body_box {flex-direction: column; justify-content: flex-start;}

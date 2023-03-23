@@ -18,7 +18,7 @@ button {
   padding: 0;
   font-size: inherit;
   font-family: inherit;
-  border: 1px solid #feb401;
+  border: 2.5px solid #feb401;
   border-radius: 27px;
 }
 button.learn-more {
