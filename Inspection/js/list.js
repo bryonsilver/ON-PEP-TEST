@@ -275,21 +275,29 @@ $(document).ready(function() {
         if(param[1] == 'women') {
             $("#pan_pc_Sex2").css('display', 'none');
             $("#pan_pc_Sex2").parent('label').css('display', 'none');
+            $("#pan_pc_Sex2").parents('.ql_question_box').css('opacity', '0.4');
+            $("#pan_pc_Sex2").parents('.q_list_tab').css('opacity', '0.4');
             
         } else if (param[1] == 'men') {
             $("#pan_pc_Sex1").css('display', 'none');
             $("#pan_pc_Sex1").parent('label').css('display', 'none');
+            $("#pan_pc_Sex1").parents('.ql_question_box').css('opacity', '0.4');
+            $("#pan_pc_Sex1").parents('.q_list_tab').css('opacity', '0.4');
             
         } else if (param[0] == 'age') {
             var param_n = Number(param[1])
             if(param_n < 55) {
                 $("#pan_pc_Age2").css('display', 'none');
                 $("#pan_pc_Age2").parent('label').css('display', 'none');
+                $("#pan_pc_Age2").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Age2").parents('.q_list_tab').css('opacity', '0.4');
                 
             } 
             else{
                 $("#pan_pc_Age1").css('display', 'none');
                 $("#pan_pc_Age1").parent('label').css('display', 'none');
+                $("#pan_pc_Age1").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Age1").parents('.q_list_tab').css('opacity', '0.4');
                 
             }
         } else if (param[0] == 'bmi') {
@@ -297,42 +305,66 @@ $(document).ready(function() {
             if(param_bmi < 25) {
                 $("#pan_pc_Obesity2").css('display', 'none');
                 $("#pan_pc_Obesity2").parent('label').css('display', 'none');
+                $("#pan_pc_Obesity2").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Obesity2").parents('.q_list_tab').css('opacity', '0.4');
                 
                 $("#pan_pc_Obesity3").css('display', 'none');
                 $("#pan_pc_Obesity3").parent('label').css('display', 'none');
+                $("#pan_pc_Obesity3").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Obesity3").parents('.q_list_tab').css('opacity', '0.4');
                 
                 $("#pan_pc_Obesity4").css('display', 'none');
                 $("#pan_pc_Obesity4").parent('label').css('display', 'none');
+                $("#pan_pc_Obesity4").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Obesity4").parents('.q_list_tab').css('opacity', '0.4');
                 
             } else if(param_bmi <= 29) {
                 $("#pan_pc_Obesity1").css('display', 'none');
                 $("#pan_pc_Obesity1").parent('label').css('display', 'none');
+                $("#pan_pc_Obesity1").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Obesity1").parents('.q_list_tab').css('opacity', '0.4');
                 
                 $("#pan_pc_Obesity3").css('display', 'none');
                 $("#pan_pc_Obesity3").parent('label').css('display', 'none');
+                $("#pan_pc_Obesity3").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Obesity3").parents('.q_list_tab').css('opacity', '0.4');
                 
                 $("#pan_pc_Obesity4").css('display', 'none');
                 $("#pan_pc_Obesity4").parent('label').css('display', 'none');
+                $("#pan_pc_Obesity4").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Obesity4").parents('.q_list_tab').css('opacity', '0.4');
                 
             } else if (param_bmi <= 30) {
                 $("#pan_pc_Obesity1").css('display', 'none');
                 $("#pan_pc_Obesity1").parent('label').css('display', 'none');
+                $("#pan_pc_Obesity1").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Obesity1").parents('.q_list_tab').css('opacity', '0.4');
                 
                 $("#pan_pc_Obesity2").css('display', 'none');
                 $("#pan_pc_Obesity2").parent('label').css('display', 'none');
+                $("#pan_pc_Obesity2").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Obesity2").parents('.q_list_tab').css('opacity', '0.4');
                 
                 $("#pan_pc_Obesity4").css('display', 'none');
                 $("#pan_pc_Obesity4").parent('label').css('display', 'none');
+                $("#pan_pc_Obesity4").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Obesity4").parents('.q_list_tab').css('opacity', '0.4');
                 
             } else if (param_bmi <= 35) {
                 $("#pan_pc_Obesity1").css('display', 'none');
                 $("#pan_pc_Obesity1").parent('label').css('display', 'none');
+                $("#pan_pc_Obesity1").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Obesity1").parents('.q_list_tab').css('opacity', '0.4');
                 
                 $("#pan_pc_Obesity2").css('display', 'none');
                 $("#pan_pc_Obesity2").parent('label').css('display', 'none');
+                $("#pan_pc_Obesity2").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Obesity2").parents('.q_list_tab').css('opacity', '0.4');
                 
                 $("#pan_pc_Obesity3").css('display', 'none');
                 $("#pan_pc_Obesity3").parent('label').css('display', 'none');
+                $("#pan_pc_Obesity3").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Obesity3").parents('.q_list_tab').css('opacity', '0.4');
                 
             }
         }
@@ -341,23 +373,35 @@ $(document).ready(function() {
             if(param_bsa <= 1.60) {
                 $("#pan_pc_bsa2").css('display', 'none');
                 $("#pan_pc_bsa2").parent('label').css('display', 'none');
+                $("#pan_pc_bsa2").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_bsa2").parents('.q_list_tab').css('opacity', '0.4');
                 
                 $("#pan_pc_bsa3").css('display', 'none');
                 $("#pan_pc_bsa3").parent('label').css('display', 'none');
+                $("#pan_pc_bsa3").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_bsa3").parents('.q_list_tab').css('opacity', '0.4');
                 
             } else if(param_bsa <= 1.90) {
                 $("#pan_pc_bsa1").css('display', 'none');
                 $("#pan_pc_bsa1").parent('label').css('display', 'none');
+                $("#pan_pc_bsa1").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_bsa1").parents('.q_list_tab').css('opacity', '0.4');
                 
                 $("#pan_pc_bsa3").css('display', 'none');
                 $("#pan_pc_bsa3").parent('label').css('display', 'none');
+                $("#pan_pc_bsa3").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_bsa3").parents('.q_list_tab').css('opacity', '0.4');
                 
             } else if (param_bsa >= 1.91) {
                 $("#pan_pc_bsa1").css('display', 'none');
                 $("#pan_pc_bsa1").parent('label').css('display', 'none');
+                $("#pan_pc_bsa1").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_bsa1").parents('.q_list_tab').css('opacity', '0.4');
                 
                 $("#pan_pc_bsa2").css('display', 'none');
                 $("#pan_pc_bsa2").parent('label').css('display', 'none');
+                $("#pan_pc_bsa2").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_bsa2").parents('.q_list_tab').css('opacity', '0.4');
                 
             }
         }
@@ -365,10 +409,14 @@ $(document).ready(function() {
             if(param[1] == 'O_type' ) {
                 $("#pan_pc_Blood1").css('display', 'none');
                 $("#pan_pc_Blood1").parent('label').css('display', 'none');
+                $("#pan_pc_Blood1").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Blood1").parents('.q_list_tab').css('opacity', '0.4');
                 
             } else {
                 $("#pan_pc_Blood2").css('display', 'none');
                 $("#pan_pc_Blood2").parent('label').css('display', 'none');
+                $("#pan_pc_Blood2").parents('.ql_question_box').css('opacity', '0.4');
+                $("#pan_pc_Blood2").parents('.q_list_tab').css('opacity', '0.4');
                 
             }
         }
