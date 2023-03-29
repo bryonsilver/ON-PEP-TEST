@@ -206,10 +206,17 @@ input {
     box-sizing: border-box;}
 .f_text {
     font-size: 17px;
-    font-weight: 800;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
-.t_title {font-weight: 800; color: #cacaca;}
+.t_title {
+    font-weight: 600; 
+    color: #cacaca; 
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
 .tel,
 .addr {
     font-size: 14px;
@@ -230,7 +237,7 @@ input {
 }
 @media (max-width: 456px) {
     .n_item a {padding: 10px 5px; font-size: 14px;}
-    .f_text {font-size: 20px;}
+    .f_text {font-size: 18px;}
     .block {font-size: 14px;}
     .main {width: 80%;}
     .m_flex {
@@ -246,4 +253,6 @@ input {
     }
     .slash {display: none;}
     .main {max-width: 100%; padding: 0 5px; box-sizing: border-box;}
+    .addr {display: flex; flex-direction: column; margin-bottom: 5px;}
+    .t_title:nth-of-type(1) {align-items: flex-start;}
 }
