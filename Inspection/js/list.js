@@ -203,17 +203,27 @@ $(document).ready(function() {
     })
     let count = 0;
     $(window).scroll(function(){
+        let d_height2 = $(document).height() - 300;
         let s_top = $(window).scrollTop();
-        let s_bot = w_height+s_top;
-        // console.log('d_height',d_height, 's_bot', s_bot)
+        let s_bot = (w_height+s_top) - 300;
+        // console.log('d_height2',d_height2, 's_bot', s_bot)
 
         if(count < 3){
-            if(d_height == s_bot) {
-                $('.position_wrap ').css({top: '80px'})
+            if(d_height2 == s_bot) {
+                $(window).resize(function(){
+                    var width = window.innerWidth;
+                    if(width > 1081 ) {
+                        $('.position_wrap ').css({top: '70px'})
+                        console.log("이건 1080보다 큼")
+                    } else if (1080 >= width) {
+                        $('.position_wrap ').css({top: '200px'})
+                        console.log("이건 1080보다 작음")
+                    }
+                }).resize();
                 count+=1;
                 console.log("count" + count);
             }
-            d_height = $(document).height();
+            d_height2 = $(document).height();
         }
     })
 

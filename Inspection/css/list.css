@@ -284,6 +284,27 @@ input[name=page] {
 .q_list_tab label input + span{color: #414a56; font-weight: 500; cursor: pointer;}
 
 
+.prev_page3_1 button.learn-more .circle .icon.arrow::before,
+.prev_page2_1 button.learn-more .circle .icon.arrow::before,
+.prev_page button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.25rem;
+    left: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-bottom: 0.125rem solid #fff;
+    border-left: 0.125rem solid #fff;
+    border-top: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+.prev_page3_1 button.learn-more .circle .icon.arrow,
+.prev_page2_1 button.learn-more .circle .icon.arrow,
+.prev_page button.learn-more .circle .icon.arrow {
+    left: 1.2rem;
+}
+
 /* footer */
 .footer {
     margin-top: 150px;
@@ -326,6 +347,11 @@ input[name=page] {
 }
 
 @media (max-width: 1200px) {
+    .prev_page3_1 button.learn-more .circle .icon.arrow,
+    .prev_page2_1 button.learn-more .circle .icon.arrow,
+    .prev_page button.learn-more .circle .icon.arrow {
+        left: 0.625rem;
+    }
     /* .b_m_box {display: inline-block;}
     .bu_box {display: none;} */
     button.learn-more .circle {width: 100% !important; color: #fff !important;}
@@ -436,8 +462,9 @@ input[name=page] {
 }
 
 @media (max-width: 530px) {
+    .footer {margin-top: 80px;}
     .ql_question_box {
-        gap: 10px;
+        gap: 5px;
     }
     .ql_q_num, .ql_q_text {
         font-size: 14px;
@@ -456,7 +483,8 @@ input[name=page] {
         font-size: 13px;
     }
     .q_list_tab {
-        margin: 10px 25px;
+        margin: 10px 10px;
+        font-size: 15px;
     }
     .prev_page,
     .next_page1,
@@ -478,6 +506,7 @@ input[name=page] {
     .content {
         width: 100%;
         margin: 0 !important;
+        margin-top: 20px !important;
         padding: 0 20px;
         box-sizing: border-box;
     }
