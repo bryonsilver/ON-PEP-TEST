@@ -8,13 +8,18 @@ $(document).ready(function(){
             $('.bar_line2').css({left: pc_param_v +'%'})
             $('.bar_line_per2').css({left: pc_param_v +'%'})
             $('.bar_line_per2').html(pc_param_v +'%')
+
+            $('.bar_img_talk2').css({left: pc_param_v +'%'})
+            $('.bar_img_talk2').html(pc_param_v +'%')
             $('.orange').css({width: pc_param_v + '%'})
 
             if (pc_param_v >100) {
                 $('.bar_line_per2').css({left: '100%'})
+                $('.bar_img_talk2').css({left: '100%'})
                 $('.bar_color').css({borderTopRightRadius: '30px', borderBottomRightRadius: '30px'})
             } else if (pc_param_v <=100) {
                 $('.bar_line_per2').css({left: pc_param_v +'%'})
+                $('.bar_img_talk2').css({left: pc_param_v +'%'})
             }
 
             var pc_num = Number(param[1])  // param[1] = 23.5  Number(param[1])
@@ -43,12 +48,15 @@ $(document).ready(function(){
             var param_v = param[1]
             $('.bar_line1').css({left: param_v +'%'})
             $('.bar_line_per1').html(param_v +'%')
+            $('.bar_img_talk1').html(param_v +'%')
             $('.yellow').css({width: param_v + '%'})
 
             if (param_v >100) {
                 $('.bar_line_per1').css({left: '100%'})
+                $('.bar_img_talk1').css({left: '100%'})
             } else if (param_v <=100) {
                 $('.bar_line_per1').css({left: param_v +'%'})
+                $('.bar_img_talk1').css({left: param_v +'%'})
             }
 
             var p_num = Number(param[1])  // param[1] = 23.5  Number(param[1])
