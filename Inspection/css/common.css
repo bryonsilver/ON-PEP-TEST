@@ -169,12 +169,16 @@ input {
     width: 100%;
     background-color: #2f2f2f;
     color: #fff;
-    padding: 0 0 30px 0;
+    /* padding: 0 0 30px 0; */
     box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+
+    /* 새로 추가하는 것 */
+    padding: 15px 0 !important;
 }
 .a_tag {
     width: 100%;
@@ -203,11 +207,39 @@ input {
 }
 .height {
     padding: 10px 0;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+
+    /* 새로 추가하는 것 */
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+    /* 새로 추가하는 것 */
+
+.footer_logo a img {
+    width: 100%;
+    max-width: 130px;
+}
+.addr_text {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* /////////////////////// */
+
+
 .f_text {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 600;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    
+    /* 새로 추가하는 것 */
+    color: #e1e1e1;
+    margin-bottom: 0 !important;
 }
 
 .t_title {
@@ -216,6 +248,7 @@ input {
     display: flex;
     gap: 5px;
     align-items: center;
+    font-size: 15px;
 }
 .tel,
 .addr {
@@ -235,9 +268,25 @@ input {
 @media (max-width: 1200px) {
     .main {max-width: 100%; padding: 0 15px; box-sizing: border-box;}
 }
+@media (max-width: 1100px) {
+    .height {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 35px 10px 35px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .addr_text {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
 @media (max-width: 456px) {
     .n_item a {padding: 10px 5px; font-size: 14px;}
-    .f_text {font-size: 18px;}
+    .f_text {font-size: 16px;}
     .block {font-size: 14px;}
     .main {width: 80%;}
     .m_flex {
@@ -252,7 +301,8 @@ input {
         align-items: center;
     }
     .slash {display: none;}
-    .main {max-width: 100%; padding: 0 5px; box-sizing: border-box;}
+    .main {max-width: 100%; padding: 0 5px 10px 5px; box-sizing: border-box;}
     .addr {display: flex; flex-direction: column; margin-bottom: 5px;}
     .t_title:nth-of-type(1) {align-items: flex-start;}
+    .height {align-items: center;}
 }

@@ -1,6 +1,6 @@
 .wrap {
     width: 100%;
-    background: #efefef;
+    background: #f7f7f7;
 }
 input[type=text]  {
     background-color: #feb04133;
@@ -38,12 +38,14 @@ input[type=text]  {
 .title_box h1 {margin: 10px 0;}
 .center_box {
     width: 100%;
+
+    margin-top: 80px;
 }
 .c_text_box {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 .c_box {
     font-size: 17px;
@@ -54,7 +56,7 @@ input[type=text]  {
     color: #4b4b4b;
 }
 
-.f_box,
+/* .f_box,
 .s_box,
 .t_box {
     width: 100%;
@@ -64,7 +66,10 @@ input[type=text]  {
 }
 .f_box {justify-content: center;}
 .s_box {justify-content: center; align-items: flex-end;}
-.t_box {justify-content: center;align-items: flex-end;}
+.t_box {justify-content: center;align-items: flex-end;} */
+
+
+
 
 
 .c_name_box {justify-content: center;}
@@ -82,7 +87,13 @@ input[type=text]  {
     align-items: center;
     display: flex;
     gap: 10px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+}
+.ccr_cr_in,
+.bmi_in,
+.bsa_in {
+    width: 80px !important;
+    text-align: left;
 }
 .ccr_box {
     display: flex;
@@ -120,11 +131,15 @@ input[type=text]  {
 .c_name_box > span,
 .c_body_box > span,
 .c_gender_box > span {
-    width: 100%;
-    display: inline-block;
+    /* width: 100%; */
+    display: flex;
     font-size: 15px ;
     font-weight: 700;
     color: rgb(44, 44, 44);
+
+    flex-direction: column;
+    text-align: left;
+    width: 80px;
 }
 .radio_box {
     display: flex;
@@ -163,7 +178,7 @@ input[type=text]  {
 
 .bu_box {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 .to_inspect {
     max-width: 240px;
@@ -228,7 +243,7 @@ input[name="rg_c"]:checked ~ label > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 .ccr_in,
 .bmi_in,
@@ -256,6 +271,7 @@ input[name="rg_c"]:checked ~ label > div {
 .gender_img > img:nth-of-type(1) {
     width: 100%;
     max-width: 50px;
+    min-width: 50px;
 }
 .b_img_after,
 .g_img_after {display: none;}
@@ -276,34 +292,68 @@ input[name="rg_c"]:checked ~ label > div {
     display: none;
 }
 
+/* 새로 추가 */
+
+.c_t_box,
+.c_f_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+.ccr_box2,
+.bmi_bsa_box,
+.birth_input_box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.bsa_box > span,
+.bmi_box > span {
+    width: 80px;
+    text-align: left;
+}
+
+
+
+
 
 /* media 반응형 사이즈 css */
 
 @media (max-width: 1380px) {
     .c_text_box {
         flex-direction: row !important;
-        gap: 0 !important;
+        /* gap: 0 !important; */
     }
     
     .content {margin-bottom: 50px;}
 }
 @media (max-width: 1320px) {
-    .c_hidden_box {
-        display: none;
+    .birth_input_box {
+        flex-direction: column;
+        align-items: flex-start;
     }
+    .c_body_box  {gap: 10px;}
+    .c_hidden_box {display: none;}
     .center_box {
         display: inline-block;
         width: 100%;
+        margin-top: 40px;
     }
     .c_text_box {
         width: 100%;
         display: flex;
         /* justify-content: center; */
-        flex-direction: column;
-        gap: 40px;
+        flex-direction: column !important;
+        gap: 30px;
         align-content: center;
+        justify-content: center;
         flex-wrap: wrap;
-        padding: 30px 0;
+        padding: 0;
+    }
+    .c_t_box, .c_f_box {
+        width: 50%;
+        margin: auto;
     }
     .c_name_box, .c_gender_box {margin: 0}
     .content { padding:  50px 10px; width: 85%;}
@@ -318,6 +368,7 @@ input[name="rg_c"]:checked ~ label > div {
     button.learn-more .button-text {color: #fff !important;}
     button.learn-more .circle .icon.arrow {background: #fff; transform: translate(1rem, 0);}
     .c_box,
+
     .title_box {
         font-size: 14px;
     }
@@ -335,58 +386,72 @@ input[name="rg_c"]:checked ~ label > div {
         gap: 20px;
     }
     .s_box {gap: 50px;}
-    .c_body_box,.c_birth_box {flex-direction: column; align-items: flex-start;}
-    .f_box, .s_box, .t_box {margin: 0 0 15px 0;}
-}
-@media (max-width: 800px) {
-    .ccr_box {width: 100%; align-items: center; margin-left: 60px;}
-    .t_box {flex-wrap: wrap;}
+    /* .c_body_box,.c_birth_box {flex-direction: column; align-items: flex-start;} */
+    /* .f_box, .s_box, .t_box {margin: 0 0 15px 0;} */
+    .ccr_box {align-items: flex-start; margin-left: 0 !important;}
 }
 @media (max-width: 667px) {
-    .s_box {align-items: flex-start;}
-    .c_name_box {width: 100%;}
     .content {margin-top: 40px;}
-    .f_box, .s_box, .t_box {flex-wrap: wrap;}
-    .c_name_box {width: 100%;}
 }
 @media (max-width: 580px) {
-    .c_b_type_box {flex-direction: column; }
+    /* .c_b_type_box {flex-direction: column; } */
     .title_box img {width: 90px;}
+    .c_t_box, .c_f_box {width: 100%; padding: 0 90px;}
+    .a_b_type, .o_ab_type {flex-direction: column;}
 }
 
 @media (max-width: 500px) {
-    .c_box > span,
+    /* .c_box > span, */
     .title_box {
         font-size: 12px;
     }
     .c_text_box {align-content: space-around; gap: 10px !important;}
    
     .c_name_box input {width: 110px;}
-    .name_box {width: 150px;}
+    .name_box {width: auto;}
     .ccr_in,.bmi_in, .bsa_in {width: 50px;}
-    .s_box, .t_box {flex-wrap: wrap;}
+    /* .s_box, .t_box {flex-wrap: wrap;} */
     .bu_box {margin-top: 30px;}
-    .s_box, .t_box {gap: 20px;}
-    .f_box {gap: 20px;}
+    /* .s_box, .t_box {gap: 20px;}
+    .f_box {gap: 20px;} */
     .title_box img {width: 70px;}
-    .a_b_type, .o_ab_type {flex-direction: column;}
-    /* .c_b_type_box {margin-right: 20px;} */
-    .c_b_type_box, .c_name_box, .c_gender_box, .c_birth_box, .c_body_box {flex-direction: column; justify-content: flex-start;}
+    .c_t_box, .c_f_box {
+        width: 50%;
+        padding: 0;
+        align-items: center;
+    }
+    .c_b_type_box > span, .c_gender_box > span, .c_birth_box > span, .c_month_box > span, .c_name_box > span, .c_body_box > span, .c_gender_box > span,
+    .ccr_cr_in, .bsa_box span, .bmi_box span {width: 100%; text-align: center;}
+    .c_b_type_box, .c_name_box, .c_gender_box, .ccr_box, .bsa_box, .bmi_box, .c_birth_box, .c_body_box {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+    .ccr {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #cr {margin-left: 0 !important;}
+    .ccr_after, .bsa_after, .bmi_after {width: 20px !important;}
+    .ccr_cr_in {width: 100% !important;}
 }
 @media (max-width: 400px) {
     .ccr_box {margin-left: 0;}
 }
-@media (max-width: 360px) {
-    .f_box {flex-direction: column;}
+/* @media (max-width: 360px) {
+    .f_box {flex-direction: column;} */
     /* .c_gender_box {margin-right: 20px;} */
-}
+/* } */
 @media (max-width: 350px) {
-    .t_box {justify-content: flex-start; box-sizing: border-box;}
-    .bmi_box,.bsa_box {padding-left: 50px !important;}
-    .f_box,.s_box,.t_box {margin: 10px 0;}
+    /* .t_box {justify-content: flex-start; box-sizing: border-box;} */
+    .bmi_box,.bsa_box {padding-left: 0px !important;}
+    /* .f_box,.s_box,.t_box {margin: 10px 0;} */
     .ccr {align-items: center; flex-direction: column;}
     .b {width: 100%;}
     .ccr_box {align-items: center;}
+    .c_t_box, .c_f_box {width: 100%;}
+    .ccr_after, .bsa_after, .bmi_after {width: auto !important;}
 }
 
 @media (max-width: 270px) {

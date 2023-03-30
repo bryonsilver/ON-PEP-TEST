@@ -42,11 +42,11 @@
                 <a href="#"><img src="./img/logo_2.png" alt="logo" class="logo_img"></a><h1>ON : PEP Test</h1>
             </div>
             <div class="c_box">
-                <span>검사를 시작하기 전에 정보를 입력해주세요</span>
+                <span>검사를 시작하기 전에 <span>정보를 입력해주세요</span></span>
             </div>
             <div class="center_box">
                 <form action="./list.html" method="get" class="c_text_box">
-                    <div class="f_box">
+                    <div class="c_f_box">
                         <div class="c_name_box">
                             <span>이름</span>
                             <div class="name_box"><input type="text" id="name_text" placeholder="이름 입력" name="name"></div>
@@ -107,52 +107,61 @@
                                </span>
                             </div>
                         </div>
-                    </div>
-                    <div class="s_box">
                         <div class="c_birth_box">
                             <span>생년월일</span>
-                            <div class="year_box">
-                                <input type="text" name="year" id="year" placeholder="태어난 해">
-                                <div class="birth_text">년</div>
+                            <div class="birth_input_box">
+                                <div class="year_box">
+                                    <input type="text" name="year" id="year" placeholder="태어난 해">
+                                    <div class="birth_text">년</div>
+                                </div>
+                                <div class="month_box">
+                                    <input type="text" name="month" id="month">
+                                    <div class="birth_text">월</div>
+                                </div>
+                                <div class="day_box">
+                                    <input type="text" name="day" id="day">
+                                    <div class="birth_text">날짜</div>
+                                </div>
+                                <input type="hidden" name="age" value="" id="age">
                             </div>
-                            <div class="month_box">
-                                <input type="text" name="month" id="month">
-                                <div class="birth_text">월</div>
-                            </div>
-                            <div class="day_box">
-                                <input type="text" name="day" id="day">
-                                <div class="birth_text">날짜</div>
-                            </div>
-                            <input type="hidden" name="age" value="" id="age">
-                        </div>
-                        <div class="c_body_box">
-                            <span>키/몸무게</span>
-                            <div class="height_box"><input type="text" name="height" id="height"><span>(cm)</span></div>
-                            <div class="weight_box"><input type="text" name="weight" id="weight"><span>(kg)</span></div>
                         </div>
                     </div>
-                    <div class="t_box">
+                    <div class="c_t_box">
+                        <div class="c_body_box">
+                            <span>키/몸무게</span>
+                            <div class="birth_input_box">
+                                <div class="height_box"><input type="text" name="height" id="height"><span>(cm)</span></div>
+                                <div class="weight_box"><input type="text" name="weight" id="weight"><span>(kg)</span></div>
+                            </div>
+                        </div>
                         <div class="bmi_box">
                             <span>BMI</span>
-                            <span class="bmi_in"></span>
-                            <span class="bmi_after">(kg/m<sup>2</sup>)</span>
-                            <input type="hidden" name="bmi" value="" id="bmi">
+                            <div class="bmi_bsa_box">
+                                <span class="bmi_in"></span>
+                                <span class="bmi_after">(kg/m<sup>2</sup>)</span>
+                                <input type="hidden" name="bmi" value="" id="bmi">
+                            </div>
                         </div>
                         <div class="bsa_box">
                             <span>BSA</span>
-                            <span class="bsa_in"></span>
-                            <span class="bsa_after">(m<sup>2</sup>)</span>
-                            <input type="hidden" name="bsa" value="" id="bsa">
+                            <div class="bmi_bsa_box">
+                                <span class="bsa_in"></span>
+                                <span class="bsa_after">(m<sup>2</sup>)</span>
+                                <input type="hidden" name="bsa" value="" id="bsa">
+                            </div>
                         </div>
                         <div class="ccr_box">
                             <span>*참고(의료인용)<span class="b"> Ccr(크레아티닌)</span></span>
                             <div class="ccr">
-                                <span class="ccr_cr_in">혈청 <input type="text" name="cr" id="cr" placeholder="Cr값을 입력해주세요" style="margin-left: 10px"></span>
-                                <div class="ccr_box_2">
-                                    <span class="ccr_in"></span>
-                                    <span class="ccr_after">(mL/min)</span>
+                                <span class="ccr_cr_in">혈청</span>
+                                <div class="ccr_box2">
+                                    <input type="text" name="cr" id="cr" placeholder="Cr값을 입력해주세요" style="margin-left: 10px">
+                                    <div class="ccr_box_2">
+                                        <span class="ccr_in"></span>
+                                        <span class="ccr_after">(mL/min)</span>
+                                    </div>
+                                    <input type="hidden" name="ccr" value="" id="ccr">
                                 </div>
-                                <input type="hidden" name="ccr" value="" id="ccr">
                             </div>
                         </div>
                     </div>
@@ -171,7 +180,7 @@
             </div>
         </div>
         <div class="footer">
-            <div class="a_tag">
+            <!-- <div class="a_tag">
                 <div class="main m_flex">
                     <div class="n_item">
                         <a href="#"><div class="n_link">개인정보처리방침</div></a>
@@ -180,13 +189,14 @@
                         <a href="https://crystalplain.github.io/plain/Inspection/index.html" target="_blank"><div class="n_link">ON PEP Test</div></a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="main height">
+                <span class="footer_logo"><a href="#"><img src="./img/pep_logo_3.png" alt=""></a></span>
                 <div class="addr_text">
                     <div class="f_text">
-                        <span>개발자: 은명</span>
+                        <span>개발자: 은명 <span class="slash">&nbsp;/</span></span>
                     </div>
-                    <span class="t_title">주소: <span class="addr"><span>서울 강서구 마곡중앙6로 45,</span> 리더스퀘어마곡 A동 403호/</span></span>
+                    <span class="t_title">주소: <span class="addr"><span>서울 강서구 마곡중앙6로 45,</span> 리더스퀘어마곡 A동 403호 &nbsp;/</span></span>
                     <span class="t_title">전화번호: <span class="tel">010-7751-8275</span></span>
                     
                 </div>
