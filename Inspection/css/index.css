@@ -316,6 +316,21 @@ input[name="rg_c"]:checked ~ label > div {
 
 
 
+/* input text 가운데 정렬 */
+#cr,
+.ccr_in, 
+.bmi_in, 
+.bsa_in,
+.height_box > input, 
+.weight_box > input, 
+.year_box > input, 
+.month_box > input, 
+.day_box > input,
+.c_name_box input {
+    text-align: center;
+}
+
+
 
 
 /* media 반응형 사이즈 css */
